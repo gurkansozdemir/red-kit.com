@@ -1,0 +1,40 @@
+﻿.tagcloud02 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+    .tagcloud02 ul li {
+        float: left;
+        width: 150px;
+        margin: 0 10px 10px 0;
+        padding: 0;
+    }
+
+        .tagcloud02 ul li a {
+            display: block;
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 1em;
+            background-color: #fff;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #333;
+            font-size: 13px;
+            text-decoration: none;
+            -webkit-transition: .2s;
+            transition: .2s;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .tagcloud02 ul li a:hover {
+                background-color: #3498db;
+                border: 1px solid #3498db;
+                color: #fff;
+            }

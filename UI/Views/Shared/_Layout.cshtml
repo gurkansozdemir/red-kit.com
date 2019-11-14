@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Red-Kit</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/megamenu.css" rel="stylesheet" />
+    <link href="~/Assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Assets/img/favicon.png" rel="icon">
+    <link href="~/Assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="~/Assets/Genel.css" rel="stylesheet" />
+    <!-- Bootstrap CSS File -->
+    <link href="~/Assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="~/Assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="~/Assets/css/style.css" rel="stylesheet">
+</head>
+<body style="padding-bottom:0;">
+
+    <header id="header" class="fixed-top">
+        <div class="container">
+            <div class="logo float-left">
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+                <a href="#intro" class="scrollto">
+                    <img src="~/Assets/images/logo_yazili.png" alt="" class="img-fluid" height="80" width="150" style="max-height:50px;">
+                </a>
+            </div>
+
+
+
+            <nav class="main-nav float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#intro">Ana Sayfa</a></li>
+                    <li><a href="#about">red-kit Nedir?</a></li>
+                    <li><a href="http://blog.red-kit.com">Blog</a></li>
+                    <li><a href="#portfolio">İletişim</a></li>
+
+                    <li class="<drop-down dropdown menu-large nav-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Categories </a>
+                        <ul class="dropdown-menu megamenu navbar-collapse collapse">
+                            <div class="row ">
+                                <li class="col-md-3 dropdown-item">
+                                    <ul>
+                                        <li class="dropdown-header"><b>Dersler</b></li>
+                                        <li>
+                                            @for (int i = 1; i < 6; i++)
+                                            {
+                                                @*<img src="~/Assets/images/red-kit_Ico.ico"/>*@
+                                                <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i>Ders @i</a>
+                                            }
+
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="col-md-3 dropdown-item">
+                                    <ul>
+                                        <li class="dropdown-header"> </li>
+                                        <li>
+                                            @for (int i = 6; i < 11; i++)
+                                            {
+                                                <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i>Ders @i</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="col-md-3 dropdown-item">
+                                    <ul>
+                                        <li class="dropdown-header"> </li>
+                                        <li>
+                                            @for (int i = 11; i < 16; i++)
+                                            {
+                                                <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i>Ders @i</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="col-md-3 dropdown-item">
+                                    <ul>
+                                        <li class="dropdown-header">  </li>
+                                        <li>
+                                            @for (int i = 16; i < 21; i++)
+                                            {
+                                                <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i>Ders @i</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="drop-down" style="position: static !important">
+                        <a href="">Dersler</a>
+                        <ul style="width:100%;">
+                            <div class="row">
+                                <li class="col-md-4">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <a href="#" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        Ders 1
+                                                    </a>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    Testt
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingTwo">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Ders 2
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        Ders 2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            Ders 3
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        Ders 3
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="col-md-4">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefor" aria-expanded="true" aria-controls="collapseOne">
+                                                        Ders 4
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapsefor" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                Ders 4
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Ders 5
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                   Ders 5
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                                        Ders 6
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                  Ders 6
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="col-md-4">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+                                                        Ders 7
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                             Ders 7
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Ders 8
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseEight" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                Ders 8
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+                                                        Ders 9
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseNine" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                               Ders 9
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+
+                        </ul>
+                    </li>
+                    <li><a href="#contact">İletişim</a></li>
+                    <li class="login"><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Giriş</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 footer-contact">
+                        <h4>Bizimle İletişime Geçin</h4>
+                        <p>
+                            <ul>
+                                <li>
+                                    <span class="fa fa-map-marker"></span><span class="text">
+                                        Çifte Havuzlar Mah.
+                                        Eski Londra Asfaltı Cad.
+                                        YTÜ Teknopark Kuluçka Mrk. A1 Blok 151/1C 1B20 Esenler İstanbul
+                                    </span>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-phone-square"></span><span class="text">
+                                            +90 532 475 66
+                                            81
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ion-ios-email-outline"></span><span class="text">info@red-kit.com</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/red_kit_tr/" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-5 col-md-6 footer-info">
+                        <h4>Bağlantılar</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#anasayfa"><span class="ion-ios-arrow-round-forward mr-2"></span>Anasayfa</a></li>
+                            <li>
+                                <a href="#redkit">
+                                    <span class="ion-ios-arrow-round-forward mr-2"></span>red-kit
+                                    Nedir?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#ogrenciyim">
+                                    <span class="ion-ios-arrow-round-forward mr-2"></span>Öğrenciyim
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://blog.red-kit.com/"><span class="ion-ios-arrow-round-forward mr-2"></span>Blog</a>
+                            </li>
+                            <li>
+                                <a href="/DersIcerik/Ders_1"><span class="ion-ios-arrow-round-forward mr-2"></span>Dersler</a>
+                            </li>
+                        </ul>
+                    </div>
+                    @*<div class="col-lg-5 col-md-6 footer-links">
+                            <h4>Harita</h4>
+                            <div class="ftco-footer-widget mb-5 ml-md-4">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1265.6388693183324!2d28.88889882041196!3d41.0205848538304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3a9506035dd03a8!2zWcSxbGTEsXogS3VsdcOna2E!5e0!3m2!1str!2str!4v1566807798132!5m2!1str!2str"
+                                        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                        </div>*@
+
+                    @*<div class="col-lg-3 col-md-6 footer-newsletter">
+                            <h4>Our Newsletter</h4>
+                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+                            <form action="" method="post">
+                                <input type="email" name="email"><input type="submit" value="Subscribe">
+                            </form>
+                        </div>*@
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="credits">
+                <p>
+                    Copyright &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    Tüm Hakları Saklıdır. <i aria-hidden="true" class="icon-heart"></i> by <a href="index.html" target="_blank">red-kit</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="~/Assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="~/Assets/lib/jquery/jquery.min.js"></script>
+    <script src="~/Assets/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="~/Assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Assets/lib/easing/easing.min.js"></script>
+    <script src="~/Assets/lib/mobile-nav/mobile-nav.js"></script>
+    <script src="~/Assets/lib/wow/wow.min.js"></script>
+    <script src="~/Assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/Assets/lib/counterup/counterup.min.js"></script>
+    <script src="~/Assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Assets/lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="~/Assets/contactform/contactform.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="~/Assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            jQuery(document).ready(function () {
+                $(".dropdown").hover(
+                    function () {
+                        $('.dropdown-menu', this).stop().fadeIn("fast");
+                    },
+                    function () {
+                        $('.dropdown-menu', this).stop().fadeOut("fast");
+                    });
+            });
+        }
+    </script>
+
+
+</body>
+</html>
