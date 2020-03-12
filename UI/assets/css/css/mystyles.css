@@ -1,0 +1,87 @@
+﻿.footer {
+    height: 100px;
+    background-color: #ebebeb;
+    clear: both;
+}
+
+.content {
+    padding-top: 30px;
+    margin-top: 35px;
+}
+
+.left-menu {
+    padding-top: 10px;
+    position: fixed;
+    width: 300px;
+    margin-left: 25px;
+}
+
+.result-info {
+
+    text-align: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background-color: gainsboro;
+    font-family: cursive;
+}
+
+.items {
+    background-color: #faebcc;
+    margin-bottom: 10px;
+}
+
+.alert {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.panel {
+    margin-bottom: 50px;
+}
+
+#myCarousel {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.carousel slide {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.navbar-brand {
+    margin: 10px;
+    height: 70px;
+    width: 240px;
+    background-image: url('../images/logom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-collapse > ul > li {
+    border-left: 1px solid orange;
+    border-right: 1px solid orange;
+}
+
+.navbar-default .navbar-nav > a:hover {
+    background-color: #f7e1b5;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+}
+
+.panel.panel-warning{
+    margin-bottom: 20px;
+}
+
+.footer > div > p{
+    text-align: center;
+    padding-top:40px;
+}

@@ -1,715 +1,574 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/LayoutPage.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<body>
+<a id="bgndVideo" class="player"
+   data-property="{videoURL:'https://www.youtube.com/watch?v=EaQWSfj4wzk',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true}">
+</a>
 
-    <!--==========================
-      Intro Section
-    ============================-->
-    <section id="intro" class="clearfix">
-        <div class="container">
-            <video autoplay muted loop style="border-radius: 0% 0% 30% 30%;">
+<div class="intro-section" id="home-section" style="min-height: 500px;">
+    <div class="container">
 
-                <source src="~/Assets/images/foto-galery/WhatsApp%20Video%202019-11-01%20at%2011.14.05.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <div class="intro-img">
+        <div class="row align-items-center">
+            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+                <h1 class="mb-3">Robotik Kodlama Eğitim Seti</h1>
+                <p class="lead mx-auto desc mb-5">İlk dersten itibaren algortima geliştiriyoruz.</p>
+                <p class="text-center">
+                    <a href="#" class="btn btn-outline-white py-3 px-5">İncele</a>
+                </p>
+            </div>
+        </div>
 
+    </div>
+</div>
 
-                <img src="img/intro-img.svg" alt="" class="img-fluid">
+<div class="site-section" id="services-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-8 section-heading">
+                <span class="subheading">red-kit Nedir?</span>
+                <h2 class="heading mb-3">İçerisinde neler var?</h2>
+                <p>
+                    Robotik kodlama öğrenmek isteyen fakat elektronik işlerle kafası karışan öğrencilerimiz için
+                    algortima geliştirmeyi temeline almış bir eğitim materyalidir.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="owl-carousel nonloop-block-14 block-14" data-aos="fade">
+            <div class="slide">
+                <div class="ftco-feature-1">
+                    <span class="icon flaticon-fit"></span>
+                    <div class="ftco-feature-1-text">
+                        <h2>red-kit Anakart</h2>
+                        <p>
+                            Üzerinde Arduino, butonlar, led ışıklar, rgb, switch, mini breadboard bulunan red-kit
+                            ana kartı.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            @*<div class="intro-info">
-                    <h2>We provide<br><span>solutions</span><br>for your business!</h2>
-                    <div>
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                        <a href="#services" class="btn-services scrollto">Our Services</a>
+            <div class="slide">
+                <div class="ftco-feature-1">
+                    <span class="icon flaticon-gym-1"></span>
+                    <div class="ftco-feature-1-text">
+                        <h2>Deney Kartları</h2>
+                        <p>Deneyleri kolayca yapmanız için size yol gösterecek olan deney kartları.</p>
                     </div>
-                </div>*@
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="ftco-feature-1">
+                    <span class="icon flaticon-gym"></span>
+                    <div class="ftco-feature-1-text">
+                        <h2>Bağlantı Kabloları</h2>
+                        <p>Bağlantıları yapmanız için gerekli tüm kablolar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="ftco-feature-1">
+                    <span class="icon flaticon-vegetables"></span>
+                    <div class="ftco-feature-1-text">
+                        <h2>Sensörler</h2>
+                        <p>Hayal gücünüzü zorlayın, sensörler size bilgi toplamaya hazır.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="ftco-feature-1">
+                    <span class="icon flaticon-fruit-juice"></span>
+                    <div class="ftco-feature-1-text">
+                        <h2>RFID Kart Okuma Sistemi</h2>
+                        <p>Kartlı geçiş sistemleri simülasyonu için rfid kart okuma seti.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="ftco-feature-1">
+                    <span class="icon flaticon-stationary-bike"></span>
+                    <div class="ftco-feature-1-text">
+                        <h2>Motorlar</h2>
+                        <p>Servo Motor ve DC Motor güç vermeniz için sizi bekliyor.</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
-    </section><!-- #intro -->
-    <main id="main">
 
-        <!--==========================
-          About Us Section
-        ============================-->
-        <section id="about">
-            <div class="container">
-                <header class="section-header">
-                    <h3>İçerisinde Neler Var?</h3>
-                    <p>red-kit kutusunda sizleri neler bekliyor.</p>
-                </header>
+    </div>
+</div>
 
-                <div class="row about-container">
-                    <div class="col-lg-6 content order-lg-1 order-2">
+<div class="bgimg" style="background-image: url('../assets/images/baa.JPG');" data-stellar-background-ratio="0.5"
+     id="blog-section">
 
-                        <div class="icon-box wow fadeInUp">
-                            <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                            <h4 class="title"><a href="#">red-kit deney kartları</a></h4>
-                            <p class="description">Deneyleri kolayca yapmanız için size yol gösterecek olan deney kartları.</p>
-                        </div>
-                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="icon"><i class="fa fa-photo"></i></div>
-                            <h4 class="title"><a href="#">red-kit ana kartı</a></h4>
-                            <p class="description">
-                                Üzerinde Arduino, butonlar, led ışıklar, rgb, switch, mini breadboard bulunan
-                                red-kit ana kartı.
-                            </p>
-                        </div>
-                        <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="icon"><i class="fa fa-bar-chart"></i></div>
-                            <h4 class="title"><a href="#">Bağlantı Kabloları</a></h4>
-                            <p class="description">Bağlantıları yapmanız için gerekli tüm kablolar.</p>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                        <div class="icon-box wow fadeInUp">
-                            <div class="icon"><i class="fa fa-photo"></i></div>
-                            <h4 class="title"><a href="#">Sensörler</a></h4>
-                            <p class="description">Hayal gücünüzü zorlayın, sensörler size bilgi toplamaya hazır.</p>
-                        </div>
-                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="icon"><i class="fa fa-bar-chart"></i></div>
-                            <h4 class="title"><a href="#">Motorlar</a></h4>
-                            <p class="description">
-                                Servo Motor ve DC Motor güç vermeniz için sizi bekliyor.
-                            </p>
-                        </div>
-                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                            <h4 class="title"><a href="#">RFID ile kartlı geçiş</a></h4>
-                            <p class="description">
-                                Kartlı geçiş sistemleri simülasyonu için rfid kart okuma seti.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row about-extra">
-                    <div class="col-lg-6 wow fadeInUp">
-                        <img src="~/Assets/images/WhatsApp Image 2019-11-01 at 11.02.01.jpeg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-                        <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-                        <p>Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.</p>
-                    </div>
-                </div>
-                <div class="row about-extra">
-                    <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-                        <img src="~/Assets/images/WhatsApp Image 2019-11-01 at 11.03.57.jpeg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-                        <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
-                        <p>
-                            Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt.
-                        </p>
-                        <p>
-                            Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
-                        </p>
-                        <p>
-                            Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
-                        </p>
-                    </div>
-
-                </div>
-
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-8">
+                <h2>red-kit ile deneyler geliştiriyor musunuz?</h2>
+                <p class="lead mx-auto desc mb-5">
+                    Sizin gibi binlerce red-kit deney geliştiricisi ile buluşma
+                    noktanız: red-kit blog.
+                </p>
+                <p class="text-center">
+                    <a href="#" class="btn btn-outline-white py-3 px-5">Blog'a Git</a>
+                </p>
             </div>
-        </section><!-- #about -->
-        <!--==========================
-          Services Section
-        ============================-->
-        @*<section class="ftco-section">
-                <div class="container">
+        </div>
+    </div>
 
-                    <div class="row">
+</div>
 
-                        </div>
-                    </div>
-                </div>
-            </section>*@
-        <section id="services" class="section-bg">
-            <div class="container">
-                <header class="section-header">
-                    <h3><span>Kurslarımıza Katılmak </span> İster misiniz?</h3>
-                    <p>Uzman eğitmenlerimiz eşliğinde red-kit ile tanışabilirsiniz.</p>
-                </header>
-                <div class="row">
-
-                    <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-
-                        @*<div class="img" style="background-image: url(../../Assets/images/teknopark1.jpg);"></div>*@
-                        <div class="box">
-                            @*<img src="~/Assets/images/foto-galery/teknopark1.jpg" />*@
-                            <h4 class="title"><a href="">Yıldız Teknopark</a></h4>
-                            <p class="description">
-                                Yıldız Teknik Üniversitesi Teknopark'da en iyi şartlarda ve özel dersliklerde eğitimlerimiz
-                                devam
-                                ediyor. Ayrıntılı bilgi için davutpasa@roboticbilim.com
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
-                        <div class="box">
-                            <div class="img" style="background-image: url(../../Assets/images/teknopark2.jpg);"></div>
-                            @*<div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>*@
-                            <h4 class="title"><a href="">Kocaeli Teknopark</a></h4>
-                            <p class="description">
-                                Kocaeli Üniversitesi Teknopark'da en iyi şartlarda ve özel dersliklerde eğitimlerimiz
-                                başlıyor.Bu
-                                kursa katılmak için bizimle iletişime geçin.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-                        <div class="box">
-                            @*<div class="icon"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>*@
-                            <div class="img" style="background-image: url(../../Assets/images/teknopark3.jpg);"></div>
-                            <h4 class="title"><a href="">İstanbul Bahçeşehir</a></h4>
-                            <p class="description">
-                                Bahçeşehir Atölyemizde özenle tasarlanmış robotik ve kodlama atölyemizde red-kit
-                                eğitimlerimiz
-                                devam ediyor. Bilgi için bahcesehir@roboticbilim.com
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-                        <div class="img" style="background-image: url(../../Assets/images/teknopark4.jpg);"></div>
-                        <div class="box">
-                            @*<div class="icon"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>*@
-                            <h4 class="title"><a href="">Antalya Teknokent</a></h4>
-                            <p class="description">
-                                Akdeniz Üniversitesi Kampüsünde, Antalya Teknokent bünyesinde devam eden red-kit
-                                atölyelerimizle
-                                ilgili ayrıntılı bilgi almak için antalya@roboticbilim.com
-                            </p>
-                        </div>
-                    </div>
-
-                    @*<div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-                            <div class="box">
-                                <div class="icon"><i class="ion-ios-world-outline" style="color: #d6ff22;"></i></div>
-                                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-                            <div class="box">
-                                <div class="icon"><i class="ion-ios-clock-outline" style="color: #4680ff;"></i></div>
-                                <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-                            </div>
-                        </div>*@
-
-                </div>
-
+<div class="site-section" id="classes-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-8  section-heading">
+                <span class="subheading">Dersler</span>
+                <h2 class="heading mb-3">Zengin İçerikli Derslerimiz</h2>
+                <p>
+                    Uzman eğtimci kadromuz tarafından özenle hazırlanmış robotik kodlama eğitim ders içerikleri.
+                </p>
             </div>
-        </section><!-- #services -->
-        <!--==========================
-          Why Us Section
-        ============================-->
-        <section id="why-us" class="wow fadeIn">
-            <div class="container">
-                <header class="section-header">
-                    <h3>Why choose us?</h3>
-                    <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
-                </header>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="lessonOne.html" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/a.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="lessonOne.html">red-kit ile Arduino #1 - LED</a></h2>
+                        <span>Dç. Dr. Fatih DEMİRKALE</span>
 
-                <div class="row row-eq-height justify-content-center">
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card wow bounceInUp">
-                            <i class="fa fa-diamond"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Corporis dolorem</h5>
-                                <p class="card-text">Deleniti optio et nisi dolorem debitis. Aliquam nobis est temporibus sunt ab inventore officiis aut voluptatibus.</p>
-                                <a href="#" class="readmore">Read more </a>
-                            </div>
-                        </div>
                     </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card wow bounceInUp">
-                            <i class="fa fa-language"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Voluptates dolores</h5>
-                                <p class="card-text">Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur.</p>
-                                <a href="#" class="readmore">Read more </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card wow bounceInUp">
-                            <i class="fa fa-object-group"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Eum ut aspernatur</h5>
-                                <p class="card-text">Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
-                                <a href="#" class="readmore">Read more </a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="lessonTwo.html" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/b.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="lessonTwo.html">red-kit ile Arduino #2 - BUTON</a></h2>
+                        <span>Dç. Dr. Fatih DEMİRKALE</span>
 
-                <div class="row counters">
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">274</span>
-                        <p>Clients</p>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">421</span>
-                        <p>Projects</p>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">1,364</span>
-                        <p>Hours Of Support</p>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <span data-toggle="counter-up">18</span>
-                        <p>Hard Workers</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!--==========================
-          Portfolio Section
-        ============================-->
-        <section id="portfolio" class="clearfix">
-            <div class="container">
-
-                <header class="section-header">
-                    <h3 class="section-title">Kullanıcı memnuniyeti ön planda.</h3>
-                    <p>
-                        Öğrencilerimizin keyifle Arduino projeleri geliştirmeleri için biz buradayız. Her türlü
-                        teknik
-                        destek ve yardım talebine aynı gün içerisinde yanıt veriyoruz.
-                    </p>
-                </header>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
                     </div>
                 </div>
 
-                <div class="row portfolio-container">
+                <div class="class-item d-flex align-items-center">
+                    <a href="" class="class-item-thumbnail" data-toggle="modal" data-target="#exampleModal">
+                        <img height="70 px" src="~/assets/images/component/j.png" alt="Image"
+                             style="padding-left: 10px;">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="" data-toggle="modal" data-target="#exampleModal">red-kit ile Arduino #3 - SWİTCH</a></h2>
+                        <span>Dç. Dr. Fatih DEMİRKALE</span>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="~/Assets/images/teknopark1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <div>
-                                    <a href="/Assets/images/teknopark1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <img src="~/Assets/images/foto-galery/teknopark2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <div>
-                                    <a href="/Assets/images/foto-galery/teknopark2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/g.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="single.html" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile
+                                Arduino #4 - POTANSİYOMETRE
+                            </a>
+                        </h2>
+                        <span>Dç. Dr. Fatih DEMİRKALE</span>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <img src="~/Assets/images/foto-galery/teknopark4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <div>
-                                    <a href="/Assets/images/foto-galery/teknopark4.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="~/Assets/images/foto-galery/teknopark3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <div>
-                                    <a href="/Assets/images/foto-galery/teknopark3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/ss.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="" data-toggle="modal" data-target="#exampleModal">red-kit ile Arduino #5 - MOD</a></h2>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <img src="~/Assets/images/foto-galery/WhatsApp Image 2019-11-01 at 11.02.01.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <div>
-                                    <a href="/Assets/images/foto-galery/WhatsApp Image 2019-11-01 at 11.02.01.jpeg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <img src="~/Assets/images/foto-galery/WhatsApp Image 2019-11-01 at 11.03.56.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <div>
-                                    <a href="/Assets/images/foto-galery/WhatsApp Image 2019-11-01 at 11.03.56.jpeg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="~/Assets/images/foto-galery/WhatsApp Image 2019-11-01 at 11.03.57.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <div>
-                                    <a href="/Assets/images/foto-galery/WhatsApp Image 2019-11-01 at 11.03.57.jpeg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="" data-toggle="modal" data-target="#exampleModal">red-kit ile Arduino #6 - PROJE 1</a></h2>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Card 3</a></h4>
-                                <p>Card</p>
-                                <div>
-                                    <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Web 1</a></h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/ı.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="" data-toggle="modal" data-target="#exampleModal">red-kit ile Arduino #7 - RGB</a></h2>
+
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/m.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="" data-toggle="modal" data-target="#exampleModal">red-kit ile Arduino #8 - FONKSİYON</a></h2>
+
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/cc.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #9 - BUZZER
+                            </a>
+                        </h2>
+                        <span>Dç. Dr. Fatih DEMİRKALE</span>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/f.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #10 - ULTRASONİK
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #11 - PROJE 2
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/e.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #12 - FOR
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/h.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #13 - LCD5110 (1)
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/h.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #14 - LCD5110 (2)
+                            </a>
+                        </h2>
+
                     </div>
                 </div>
             </div>
-        </section><!-- #portfolio -->
-        <!--==========================
-          Clients Section
-        ============================-->
 
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="lessonOne.html" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="lessonOne.html">red-kit ile Arduino #15 - PROJE 3</a></h2>
 
-        <section id="testimonials" class="section-bg">
-            <div class="container">
-
-                <header class="section-header">
-                    <h3>Öğrencilerimiz </span> red-kit Hakkında Ne Düşünüyor?</h3>
-                </header>
-
-                <div class="row justify-content-center">
-                    <div class="owl-carousel testimonials-carousel wow fadeInUp">
-                        <div class="testimonial-item">
-                            <img src="~/Assets/images/cetin.jpg" class="testimonial-img" alt="">
-                            <h3>Çetin Arda Aybastı</h3>
-                            <h4>Öğrenci</h4>
-                            <p>
-                                Kodlamayı normal ardunio yerine red-kit ile daha kolay öğrenebiliyorum.
-                                Öğretmenleri çok iyi bir eğitim veriyor. Bunun sonucunda kodlamayı daha kolay
-                                öğrenebiliyorum.
-                            </p>
-                        </div>
-
-                        <div class="testimonial-item">
-                            <img src="~/Assets/images/azizhan.jpg" class="testimonial-img" alt="">
-                            <h3>Azizhan Dörtkardeş</h3>
-                            <h4>Öğrenci</h4>
-                            <p>
-
-                                Kablo karışıklığı olmadan Arduino öğrenmeyi sağlıyor,
-                                bu ürün fiyat-performans ürünü, üzerinde bütün herşeyin pinleri var
-                                vcc ve gnd hatları alttaki kanallardan iletiliyor
-                                Her şeyin bağlantısı olmasına rağmen üzerinde bir breadbord var.
-                            </p>
-                        </div>
-                        @*<div class="testimonial-item">
-                                <img src="~/Assets/images/foto-galery/WhatsApp Image 2019-11-01 at 11.02.01.jpeg" class="testimonial-img" alt="">
-                                <h3>Yiğit Üzeyin</h3>
-                                <h4>Öğrenci</h4>
-                                <p>
-                                    dfsdfsdfsdf
-                                </p>
-                            </div>*@
                     </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="lessonTwo.html" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/n.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="lessonTwo.html">red-kit ile Arduino #16 - DHT11</a></h2>
 
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" class="class-item-thumbnail" data-toggle="modal" data-target="#exampleModal">
+                        <img height="70 px" src="~/assets/images/component/i.png" alt="Image"
+                             style="padding-left: 10px;">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #17 - LDR
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="single.html" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile
+                                Arduino #18 - PROJE 4
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/o.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #19 - SERVO
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/p.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #20 - PIR
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/r.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #21 - RFID + DİZİLER (1)
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/r.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #22 - RFID + DİZİLER (2)
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #23 - PROJE 5
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/zz.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #24 - IR REMOTE
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #25 - PROJE 6
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #26 - PROJE 7
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #27 - PROJE 8
+                            </a>
+                        </h2>
+
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="class-item-thumbnail">
+                        <img src="~/assets/images/component/k.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                red-kit ile Arduino
+                                #28 - PROJE 9
+                            </a>
+                        </h2>
+
+                    </div>
                 </div>
             </div>
-        </section><!-- #testimonials -->
-        <!--==========================
-          Team Section
-        ============================-->
-        <section id="team">
-            <div class="container">
-                <div class="section-header">
-                    <h3>Team</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-                </div>
+        </div>
+    </div>
+</div>
 
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 wow fadeInUp">
-                        <div class="member">
-                            <img src="img/team-1.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
-                                    <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="member">
-                            <img src="img/team-2.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
-                                    <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="member">
-                            <img src="img/team-3.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>William Anderson</h4>
-                                    <span>CTO</span>
-                                    <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="member">
-                            <img src="img/team-4.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Amanda Jepson</h4>
-                                    <span>Accountant</span>
-                                    <div class="social">
-                                        <a href=""><i class="fa fa-twitter"></i></a>
-                                        <a href=""><i class="fa fa-facebook"></i></a>
-                                        <a href=""><i class="fa fa-google-plus"></i></a>
-                                        <a href=""><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+<div class="bgimg" style="background-image: url('../assets/images/section.jpg');" id="card-section">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <h2 class="">Deney Kartları</h2>
+                <p class="lead mx-auto desc mb-5">
+                    Kutu içerisinde bulunan tüm komponentlerin çalışma prensibi,
+                    günlük hayatta kullanılan yerler, nasıl bağlantısı yapılmalı ve nasıl programlanmalı
+                    bilgilerinin bulunduğu eğitim kartlarımızla öğrencinin kendini geliştrimesine olanak
+                    sağlıyoruz.
+                </p>
             </div>
-        </section><!-- #team -->
-        <!--==========================
-          Clients Section
-        ============================-->
-        <section id="clients" class="section-bg">
+        </div>
+    </div>
+</div>
 
-            <div class="container">
+<div class="container">
+    <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8  section-heading" style="padding-top: 35px;">
+            <span class="subheading">Memnuniyet</span>
+            <h2 class="heading mb-3">Kullanıcı Memnuniyeti</h2>
+            <p>
+                Öğrencilerimizin keyifle Arduino projeleri geliştirmeleri için biz buradayız. Her türlü teknik
+                destek ve yardım talebine aynı gün içerisinde yanıt veriyoruz.
+            </p>
+        </div>
+    </div>
+</div>
 
-                <div class="section-header">
-                    <h3>Our CLients</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
-                </div>
-
-                <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-1.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-2.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-3.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-4.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-5.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-6.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-7.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="client-logo">
-                            <img src="img/clients/client-8.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
+<div class="bgimg " style="background-image: url( '../assets/images/section_wood.jpg');" id="wood-section">
+    <div class="container ">
+        <div class="row align-items-center justify-content-center text-center ">
+            <div class="col-md-6 "></div>
+            <div class="col-md-6 ">
+                <h2 class=" ">Ahşap Setler</h2>
+                <p class="lead mx-auto desc mb-5 ">
+                    red-kit eğitimini tamamlayan öğrencilerimize demonte halde
+                    verdiğimiz ahşap setlerimizi derste montajlıyoruz, devre elemanlarını yerleştiriyoruz ve
+                    programlayarak kullanıma hazır birer ürün ortaya çıkartıyoruz.
+                </p>
             </div>
+        </div>
+    </div>
+</div>
 
-        </section>
+<div id="contact-section" class="site-section bg-light ">
+    <div class="container ">
 
-        <!--==========================
-          Contact Section
-        ============================-->
-        <section id="contact">
-            <div class="container-fluid">
-
-                <div class="section-header">
-                    <h3>Bizimle İletişime Geçin</h3>
-                </div>
-
-                <div class="row wow fadeInUp">
-
-                    <div class="col-lg-6">
-                        <div class="map mb-4 mb-lg-0">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1265.6388693183324!2d28.88889882041196!3d41.0205848538304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3a9506035dd03a8!2zWcSxbGTEsXogS3VsdcOna2E!5e0!3m2!1str!2str!4v1566807798132!5m2!1str!2str" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-md-5 info">
-                                <i class="ion-ios-location-outline"></i>
-                                <p>
-                                    Çifte Havuzlar Mah.
-                                    Eski Londra Asfaltı Cad.
-                                    YTÜ Teknopark Kuluçka Mrk. A1 Blok 151/1C 1B20 Esenler İstanbul
-                                </p>
-                            </div>
-                            <div class="col-md-4 info">
-                                <i class="ion-ios-email-outline"></i>
-                                <p>info@red-kit.com</p>
-                            </div>
-                            <div class="col-md-3 info">
-                                <i class="ion-ios-telephone-outline"></i>
-                                <p>
-                                    +90 532 475 66
-                                    81
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="form">
-                            <div id="sendmessage">Your message has been sent. Thank you!</div>
-                            <div id="errormessage"></div>
-                            <form action="" method="post" role="form" class="contactForm">
-                                <div class="form-row">
-                                    <div class="form-group col-lg-6">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Adınız" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                        <div class="validation"></div>
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                        <div class="validation"></div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="text-center"><button type="submit" title="Send Message">Mesaj Gönder</button></div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- #contact -->
-
-    </main>
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <!-- Uncomment below i you want to use a preloader -->
-    <!-- <div id="preloader"></div> -->
-</body>
-</html>
-
-
+    </div>
+</div>

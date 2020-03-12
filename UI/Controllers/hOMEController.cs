@@ -8,7 +8,7 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: hOME
+        // GET: Home
         public ActionResult Index()
         {
             return View();

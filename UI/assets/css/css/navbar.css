@@ -1,0 +1,126 @@
+﻿#header {
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: 10000;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 63px;
+    border-bottom: solid 1px #ececec;
+}
+
+    #header .wrap {
+        position: relative;
+    }
+
+        #header .wrap .lang-selector {
+            position: absolute;
+            z-index: 10020;
+            top: 0;
+            left: 100%;
+            margin-left: -28px;
+            display: block;
+            width: 28px;
+            height: 24px;
+            background-color: #363638;
+        }
+
+            #header .wrap .lang-selector a {
+                display: block;
+                width: 28px;
+                height: 24px;
+                line-height: 24px;
+                color: #fff;
+                text-decoration: none;
+                font-size: 11px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+                #header .wrap .lang-selector a:hover {
+                    text-decoration: underline;
+                }
+
+    #header .head-wrap {
+        position: relative;
+        width: 1246px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header #back_active {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background-image: url(../images/menu_active.png);
+        background-position: 0 0;
+        background-size: 105px auto;
+        background-repeat: no-repeat;
+        display: block;
+        color: #ffffff;
+        width: 105px;
+        height: 76px;
+    }
+
+    #header div {
+        padding: 0;
+        margin: 0;
+    }
+
+    #header img#exo_logo {
+        float: left;
+        padding-top: 20px;
+        cursor: pointer;
+    }
+
+    #header nav {
+        position: absolute;
+        display: block;
+        top: 0;
+        width: 735px;
+        left: 485px;
+    }
+
+    #header ul {
+        float: left;
+        padding: 0;
+        margin: 0;
+        height: 65px;
+        z-index: 10021;
+        width: 100%;
+        display: table-row;
+        list-style-type: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+        #header ul li {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            display: block;
+            float: left;
+            width: 105px;
+            text-transform: uppercase;
+            font-size: 12px;
+            z-index: 10022;
+            padding: 0;
+            margin: 0;
+        }
+
+            #header ul li a {
+                border: 0 none;
+                outline: none;
+                display: block;
+                padding-top: 22px;
+                text-decoration: none;
+                color: #4d4d4f;
+                line-height: 65px;
+                vertical-align: middle;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+            }
+
+                #header ul li a.active {
+                    color: #fff;
+                }
