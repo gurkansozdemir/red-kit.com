@@ -1,0 +1,167 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="generator" content="Jekyll v3.8.5">
+<title>Ön Kayıt Formu</title>
+
+<!-- Bootstrap core CSS -->
+<link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Assets/css/bootstrap-reboot.min.css" rel="stylesheet" />
+<link href="~/Assets/css/bootstrap-grid.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="~/assets/images/robotikbilim.ico" />
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+<!-- Custom styles for this template -->
+<link href="https://getbootstrap.com/docs/4.3/examples/checkout/form-validation.css" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151598318-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-151598318-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '597744184122625');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=597744184122625&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<div class="container">
+    <div class="py-5 text-center">
+        <a href="../Home/Index"><img class="d-block mx-auto mb-4" src="../../Assets/images/roboticbilim logo.png" alt="" width="200"></a>
+        <h2>Robotik Bilim Atölyesi Ön Kayıt Formu</h2>
+        <p class="lead">Arduino tabanlı bir eğitim seti olan red-kit ile robotik kodlama artık çok daha kolay. Sizde bu fırsattan yararlanmak istiyorsanız hemen formu doldurun sizinle iletişime geçelim.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-1 order-md-1">
+            <!--Sol Boşluk-->
+        </div>
+        <div class="col-md-10 order-md-1">
+            <div id="demo"></div>
+            <form class="needs-validation" novalidate="" id="registerForm" action="/Registered/Index" method="POST">
+                <!-- Kurs Merkezi Input-->
+                <div style="margin-bottom: 50px;">
+                    <label for="trainingCenter">Başvuru Yapmak İstediniz Kurs Merkezini Seçiniz</label>
+                    <select class="custom-select d-block w-100" name="atelierID" id="atelierID" required="">
+                        <option selected disabled value="">Lütfen şube seçiniz</option>
+                        @*@foreach (Atelier item in ateliers)
+                            {
+                                <option value="@item.ID">@item.Name</option>
+                            }*@
+                    </select>
+                    <div class="invalid-feedback">
+                        Katılmak istediniz kurs merkezini seçin.
+                    </div>
+                </div>
+                <h4 class="mb-3">Öğrenci Bilgileri</h4>
+                <!-- Ad Soyad Satırı -->
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName">Adı</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Öğrenci adı girilmelidir.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="lastName">Soyadı</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Öğrenci soyadı girilmelidir.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 ">
+                        <div class="form-group">
+                            <label for="class ">Sınıf</label>
+                            <select class="custom-select d-block w-100" id="grade" name="grade" required>
+                                <option disabled selected value="">Lütfen sınıfı seçiniz </option>
+                                <option value="14">Okul Öncesi 4 Yaş</option>
+                                <option value="15">Okul Öncesi 5 Yaş</option>
+                                <option value="16">Okul Öncesi 6 Yaş</option>
+                                @for (int i = 1; i < 13; i++)
+                                {
+                                    <option>@i</option>
+                                }
+                            </select>
+                            <div class="invalid-feedback ">
+                                Sınıfınız seçiniz.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mb-3 ">Veli Bilgileri</h4>
+                <div class="row ">
+                    <div class="col-md-6 mb-3 ">
+                        <label for="parentFirstName ">Adı</label>
+                        <input type="text" class="form-control " id="parentFirstName" name="parentFirstName" placeholder="" value="" required>
+                        <div class="invalid-feedback ">
+                            Veli adı girilmelidir.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="phone">Telefon</label>
+                        <input type="text" class="form-control" id="parentPhoneNumber" name="parentPhoneNumber" placeholder="Telefon numaranızı başında 0 olmadan giriniz." required autocomplete="off">
+                        <div class="invalid-feedback">
+                            Telefon numarası girilmelidir.
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Mesajınız:</span>
+                    </div>
+                    <textarea class="form-control" id="parentNote" placeholder="Lütfen öğrencimizin haftasonu diğer etkinlik programlarını ( saat aralıkları ile) giriniz." name="parentNote" rows="5" aria-label="With textarea" style="height: 96px;padding-left: 15px;"></textarea>
+                </div>
+                <div class="custom-control custom-checkbox" style="margin-top:20px;">
+                    <input type="checkbox" class="custom-control-input" id="notification">
+                    <label class="custom-control-label" for="notification"><a data-toggle="modal" href="#politika">Gizlilik ve Çerez Politikası</a>’nı okuduğumu ve kabul ettiğimi onaylıyorum.</label>
+                </div>
+                <hr class="mb-4 ">
+                <button class="btn btn-raised btn-primary btn-lg btn-block" id="btnSubmit" type="submit" style="background-color:#ffc500">Başvur</button>
+            </form>
+        </div>
+        <div class="col-md-1 order-md-1">
+            <!--Sağ Boşluk-->
+        </div>
+    </div>
+</div>
