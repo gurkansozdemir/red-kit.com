@@ -1,5 +1,4 @@
-﻿using Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,13 +6,11 @@ using System.Web.Mvc;
 
 namespace UI.Controllers
 {
-    public class HomeController : Controller
+    public class SignController : Controller
     {
-        // GET: Home
+        // GET: Sign
         public ActionResult Index()
         {
-            RedKitContext cnt = new RedKitContext();
-           List<signUp> test = cnt.SignUp.ToList();
             return View();
         }
     }
