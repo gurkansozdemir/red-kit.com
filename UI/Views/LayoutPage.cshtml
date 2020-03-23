@@ -86,12 +86,12 @@
                                     <img src="~/assets/images/abcd.png" style="height:55px;" alt="Image" />&nbsp &nbsp
                                     <img src="~/assets/images/logoşekil.png" style="height:55px;" alt="Image" />
                                 </p>
-                                
+
                             </div>
                             <div class="col-lg-4">
                                 <p><br /></p>
                                 <p><h2 style="color:white;">Robotik Bilim Atölyesi</h2></p>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            
+
                             <ul class="address1">
                                 <li><p style="font-size:larger">İletişim</p></li>
                                 <li><i class="fa fa-map-marker"></i>Yıldız Teknik Üniversitesi </li>
@@ -184,7 +184,18 @@
     <script src="~/assets/js/jquery.sticky.js "></script>
     <script src="~/assets/js/jquery.mb.YTPlayer.min.js "></script>
     <script src="~/assets/js/main.js "></script>
+    @if (ViewBag.PopupMessage != null)
+    {
+        <script>
 
+$(document).ready(function(){
+
+alert('@ViewBag.PopupMessage');
+
+});
+
+        </script>
+    }
 </body>
 
 </html>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-   public class signUp:BaseEntity
+   public class SignUp:BaseEntity
     {
         public string UserName { get; set; }
         public string Password { get; set; }
