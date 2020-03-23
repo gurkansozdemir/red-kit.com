@@ -49,9 +49,5 @@ namespace UI.Controllers
         {
             return View();
         }
-        public ActionResult Proje1()
-        {
-            return View();
-        }
     }
 }
