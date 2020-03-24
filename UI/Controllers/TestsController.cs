@@ -49,5 +49,9 @@ namespace UI.Controllers
         {
             return View();
         }
+        public ActionResult SwitchOne()
+        {
+            return View();
+        }
     }
 }

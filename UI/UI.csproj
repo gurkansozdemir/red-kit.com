@@ -328,9 +328,6 @@
     <Content Include="Loginpage\vendor\select2\select2.js" />
     <Content Include="Loginpage\vendor\select2\select2.min.css" />
     <Content Include="Loginpage\vendor\select2\select2.min.js" />
-    <Content Include="obj\Debug\UI.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\UI.dll" />
-    <Content Include="obj\Debug\UI.pdb" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -343,9 +340,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -475,11 +469,6 @@
     <Content Include="assets\fonts\open-iconic\open-iconic.otf" />
     <Content Include="assets\fonts\open-iconic\open-iconic.ttf" />
     <Content Include="assets\fonts\open-iconic\open-iconic.woff" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\UI.csproj.CopyComplete" />
-    <Content Include="obj\Debug\UI.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\UI.csprojAssemblyReference.cache" />
-    <Content Include="obj\Release\UI.csproj.CoreCompileInputs.cache" />
     <Content Include="Loginpage\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Loginpage\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="Loginpage\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
@@ -556,6 +545,8 @@
     <Content Include="Views\Tests\ButonFour.cshtml" />
     <Content Include="Views\Tests\ButonFive.cshtml" />
     <Content Include="Views\Tests\ButonSix.cshtml" />
+    <Content Include="Views\Lesson\Switch.cshtml" />
+    <Content Include="Views\Tests\SwitchOne.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -566,7 +557,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\SignUp\" />
     <Folder Include="Views\Sign\" />
