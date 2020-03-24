@@ -187,10 +187,12 @@
     <Content Include="assets\fonts\ionicons\css\ionicons.min.css" />
     <Content Include="assets\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="assets\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="assets\images\aa.PNG" />
+    <Content Include="assets\images\abcd.png" />
     <Content Include="assets\images\ahsap_section.png" />
     <Content Include="assets\images\baa.JPG" />
+    <Content Include="assets\images\bg-01.jpg" />
     <Content Include="assets\images\bg_03.jpg" />
-    <Content Include="assets\images\bg_05.JPG" />
     <Content Include="assets\images\component\a.png" />
     <Content Include="assets\images\component\b - Kopya.PNG" />
     <Content Include="assets\images\component\b.PNG" />
@@ -218,7 +220,15 @@
     <Content Include="assets\images\component\zz.png" />
     <Content Include="assets\images\component\ı.png" />
     <Content Include="assets\images\deney_section.png" />
+    <Content Include="assets\images\iconfinder_facebook_circle_color_107175.png" />
+    <Content Include="assets\images\iconfinder_facebook_circle_gray_107140.png" />
+    <Content Include="assets\images\iconfinder_instagram_circle_294711 %281%29.png" />
+    <Content Include="assets\images\iconfinder_instagram_circle_gray_107138.png" />
+    <Content Include="assets\images\iconfinder_linkedin_circle_gray_107149.png" />
+    <Content Include="assets\images\iconfinder_youtube_circle_gray_107133.png" />
+    <Content Include="assets\images\icons\favicon.ico" />
     <Content Include="assets\images\logo_yazili.png" />
+    <Content Include="assets\images\logoşekil.png" />
     <Content Include="assets\images\red-kit_ico.ico" />
     <Content Include="assets\images\schematic_diagrams\1.1.LedYakma.png" />
     <Content Include="assets\images\schematic_diagrams\1.2.İkiLedKontrolü.png" />
@@ -285,6 +295,12 @@
     <Content Include="assets\js\scrollax.min.js" />
     <Content Include="assets\js\slick.min.js" />
     <Content Include="assets\js\typed.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Loginpage\css\main.css" />
     <Content Include="Loginpage\css\util.css" />
@@ -328,13 +344,18 @@
     <Content Include="Loginpage\vendor\select2\select2.js" />
     <Content Include="Loginpage\vendor\select2\select2.min.css" />
     <Content Include="Loginpage\vendor\select2\select2.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LessonController.cs" />
-    <Compile Include="Controllers\SignController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -545,8 +566,6 @@
     <Content Include="Views\Tests\ButonFour.cshtml" />
     <Content Include="Views\Tests\ButonFive.cshtml" />
     <Content Include="Views\Tests\ButonSix.cshtml" />
-    <Content Include="Views\Lesson\Switch.cshtml" />
-    <Content Include="Views\Tests\SwitchOne.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -557,9 +576,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\SignUp\" />
-    <Folder Include="Views\Sign\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj">

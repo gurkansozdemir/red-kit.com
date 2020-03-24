@@ -202,12 +202,12 @@ h5,
 }
 
 .site-section {
-    padding: 2.5em 0;
+    /*padding: 2.5em 0;*/
 }
 
 @media (min-width: 768px) {
     .site-section {
-        padding: 5em 0;
+        /*padding: 5em 0;*/
     }
 }
 

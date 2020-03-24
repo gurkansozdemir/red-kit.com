@@ -13,7 +13,10 @@ namespace Entity
         {
           
         }
-        public DbSet<signUp> SignUp { get; set; }
+        public DbSet<SignUp> SignUp { get; set; }
+        public DbSet<ActivationCode> ActivationCode { get; set; }
+
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
