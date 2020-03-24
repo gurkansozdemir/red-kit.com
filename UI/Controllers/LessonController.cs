@@ -17,9 +17,10 @@ namespace UI.Controllers
         {
             return View();
         }
-        public ActionResult Proje1()
-        {
+
+        public ActionResult Switch()
+        { 
             return View();
         }
-    }
+}
 }

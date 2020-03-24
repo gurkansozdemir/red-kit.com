@@ -490,11 +490,6 @@
     <Content Include="assets\fonts\open-iconic\open-iconic.otf" />
     <Content Include="assets\fonts\open-iconic\open-iconic.ttf" />
     <Content Include="assets\fonts\open-iconic\open-iconic.woff" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\UI.csproj.CopyComplete" />
-    <Content Include="obj\Debug\UI.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\UI.csprojAssemblyReference.cache" />
-    <Content Include="obj\Release\UI.csproj.CoreCompileInputs.cache" />
     <Content Include="Loginpage\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Loginpage\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="Loginpage\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
@@ -571,7 +566,6 @@
     <Content Include="Views\Tests\ButonFour.cshtml" />
     <Content Include="Views\Tests\ButonFive.cshtml" />
     <Content Include="Views\Tests\ButonSix.cshtml" />
-    <Content Include="Views\Lesson\Proje1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -582,6 +576,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Views\Shared\" />
     <Folder Include="Views\SignUp\" />
   </ItemGroup>
   <ItemGroup>
