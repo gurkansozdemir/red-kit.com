@@ -568,6 +568,9 @@
     <Content Include="Views\Tests\ButonFive.cshtml" />
     <Content Include="Views\Tests\ButonSix.cshtml" />
     <Content Include="Views\Lesson\Proje1.cshtml" />
+    <Content Include="Views\Lesson\RGB.cshtml" />
+    <Content Include="Views\Tests\RGBFirst.cshtml" />
+    <Content Include="Views\Tests\RGBSecond.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -49,5 +49,13 @@ namespace UI.Controllers
         {
             return View();
         }
+        public ActionResult RGBFirst()
+        {
+            return View();
+        }
+        public ActionResult RGBSecond()
+        {
+            return View();
+        }
     }
 }

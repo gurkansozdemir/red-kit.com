@@ -21,5 +21,10 @@ namespace UI.Controllers
         {
             return View();
         }
+        public ActionResult RGB()
+        {
+            return View();
+        }
+       
     }
 }

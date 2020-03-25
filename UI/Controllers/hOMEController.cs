@@ -12,8 +12,8 @@ namespace UI.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            RedKitContext cnt = new RedKitContext();
-           List<signUp> test = cnt.SignUp.ToList();
+            //RedKitContext cnt = new RedKitContext();
+           //List<signUp> test = cnt.SignUp.ToList();
             return View();
         }
     }
