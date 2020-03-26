@@ -153,6 +153,7 @@
     <Content Include="assets\css\jquery.fancybox.min.css" />
     <Content Include="assets\css\jquery.mb.YTPlayer.min.css" />
     <Content Include="assets\css\magnific-popup.css" />
+    <Content Include="assets\css\main.css" />
     <Content Include="assets\css\mediaelementplayer.css" />
     <Content Include="assets\css\modern-business.css" />
     <Content Include="assets\css\myStyle.css" />
@@ -162,6 +163,7 @@
     <Content Include="assets\css\owl.carousel.min.css" />
     <Content Include="assets\css\owl.theme.default.min.css" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\util.css" />
     <Content Include="assets\dist\css\bootstrap-grid.css" />
     <Content Include="assets\dist\css\bootstrap-grid.min.css" />
     <Content Include="assets\dist\css\bootstrap-reboot.css" />
