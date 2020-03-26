@@ -16,16 +16,50 @@ namespace UI.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(string username,string password,string passwordagain,string activationCode)
+        public ActionResult Index(string username, string password, string passwordagain, string activationCode)
         {
-            if (password==passwordagain)
+            if (password == passwordagain)
             {
+                List<ActivationCode> activationList = dbContext.ActivationCode.ToList();
+                foreach (var item in activationList)
+                {
+                    if (item.Code == activationCode)
+                    {
+                        if (item.IsActive == false)
+                        {
+                            SignUp tmp = new SignUp()
+                            {
+                                ActivationCode = activationCode,
+                                CreatedOn = DateTime.Now,
+                                Password = password,
+                                UserName = username
+                            };
+                            ActivationCode code = dbContext.ActivationCode.Find(item.ID);
+                            code.IsActive = true;
+                            dbContext.SignUp.Add(tmp);
+                            dbContext.SaveChanges();
+                            ViewBag.PopupMessage = "Üyeliğiniz gerçekleşti.";
+                        }
+                        //else
+                        //{
+                        //    ViewBag.PopupMessage = "Aktivasyon kodu daha önce kullanılmıştır";
+                        //}
+                    }
+                    else
+                    {
+                        ViewBag.PopupMessage = "Aktivasyon kodu sistemde tanımlı değildir.Lütfen tekrar kontrol ediniz.";
+                    }
+                }
 
             }
             else
             {
-                //şifreler uyuşmuyor.
+                ViewBag.PopupMessage = "Şifreler uyuşmamaktadır. Tekrar kontrol ediniz.";
             }
+            return RedirectToAction("Index", "Home");
+        }
+        public ActionResult Login()
+        {
             return View();
         }
     }
