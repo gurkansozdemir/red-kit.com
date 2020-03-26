@@ -13,7 +13,7 @@ namespace UI.Controllers
         public ActionResult Index()
         {
             RedKitContext cnt = new RedKitContext();
-           List<signUp> test = cnt.SignUp.ToList();
+            List<signUp> test = cnt.SignUp.ToList();
             return View();
         }
     }
