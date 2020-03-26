@@ -197,10 +197,14 @@
     <Content Include="assets\images\component\b - Kopya.PNG" />
     <Content Include="assets\images\component\b.PNG" />
     <Content Include="assets\images\component\bb.png" />
+    <Content Include="assets\images\component\buzzer.png" />
+    <Content Include="assets\images\component\BuzzerFirst.png" />
+    <Content Include="assets\images\component\BuzzerSecond.png" />
     <Content Include="assets\images\component\cc.png" />
     <Content Include="assets\images\component\d.PNG" />
     <Content Include="assets\images\component\e.png" />
     <Content Include="assets\images\component\f.PNG" />
+    <Content Include="assets\images\component\Fonksiyon.png" />
     <Content Include="assets\images\component\g.PNG" />
     <Content Include="assets\images\component\h.PNG" />
     <Content Include="assets\images\component\i.png" />
@@ -212,9 +216,20 @@
     <Content Include="assets\images\component\n.png" />
     <Content Include="assets\images\component\o.png" />
     <Content Include="assets\images\component\p.png" />
+    <Content Include="assets\images\component\ParametreliFonksiyon.png" />
+    <Content Include="assets\images\component\proje1 baglantı.png" />
     <Content Include="assets\images\component\r.png" />
+    <Content Include="assets\images\component\rgb.png" />
+    <Content Include="assets\images\component\RGBDeger.png" />
+    <Content Include="assets\images\component\RGBFirst.png" />
+    <Content Include="assets\images\component\RGBSecond.png" />
     <Content Include="assets\images\component\s.png" />
     <Content Include="assets\images\component\ss.png" />
+    <Content Include="assets\images\component\Ultrasonik.png" />
+    <Content Include="assets\images\component\UltrasonikFirst.png" />
+    <Content Include="assets\images\component\Ultrasonikms.png" />
+    <Content Include="assets\images\component\UltrasonikSecond.png" />
+    <Content Include="assets\images\component\UltrasonikThird.png" />
     <Content Include="assets\images\component\yeni_logo_yanyana - Kopya.png" />
     <Content Include="assets\images\component\yeni_logo_yanyana.png" />
     <Content Include="assets\images\component\zz.png" />
@@ -259,7 +274,7 @@
     <Content Include="assets\images\schematic_diagrams\8.2.Rgb ile Buton.png" />
     <Content Include="assets\images\schematic_diagrams\8.3.Işık Ldr ile Led ve buton.png" />
     <Content Include="assets\images\schematic_diagrams\9.1.Termometre.png" />
-    <Content Include="assets\images\schematic_diagrams\Servo Motor.png" />
+    <Content Include="assets\images\component\Servo Motor.png" />
     <Content Include="assets\images\section.jpg" />
     <Content Include="assets\images\section_wood.jpg" />
     <Content Include="assets\images\TEMA.jpg" />
@@ -570,6 +585,23 @@
     <Content Include="Views\Lesson\RGB.cshtml" />
     <Content Include="Views\Tests\RGBFirst.cshtml" />
     <Content Include="Views\Tests\RGBSecond.cshtml" />
+    <Content Include="Views\Lesson\Fonksiyon.cshtml" />
+    <Content Include="Views\Tests\FonksiyonFirst.cshtml" />
+    <Content Include="Views\Tests\FonksiyonSecond.cshtml" />
+    <Content Include="Views\Tests\FonksiyonThird.cshtml" />
+    <Content Include="Views\Lesson\Buzzer.cshtml" />
+    <Content Include="Views\Tests\BuzzerFirst.cshtml" />
+    <Content Include="Views\Tests\BuzzerSecond.cshtml" />
+    <Content Include="Views\Tests\BuzzerThird.cshtml" />
+    <Content Include="Views\Tests\BuzzerFourth.cshtml" />
+    <Content Include="Views\Lesson\Ultrasonik.cshtml" />
+    <Content Include="Views\Tests\UltrasonikFirst.cshtml" />
+    <Content Include="Views\Tests\UltrasonikSecond.cshtml" />
+    <Content Include="Views\Tests\UltrasonikThird.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Tests\SwitchOne.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Lesson\Switch.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -583,6 +615,7 @@
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\SignUp\" />
+    <Folder Include="Views\Sign\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj">

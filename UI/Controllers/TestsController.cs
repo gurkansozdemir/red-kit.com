@@ -49,5 +49,53 @@ namespace UI.Controllers
         {
             return View();
         }
+        public ActionResult RGBFirst()
+        {
+            return View();
+        }
+        public ActionResult RGBSecond()
+        {
+            return View();
+        }
+        public ActionResult FonksiyonFirst()
+        {
+            return View();
+        }
+        public ActionResult FonksiyonSecond()
+        {
+            return View();
+        }
+        public ActionResult FonksiyonThird()
+        {
+            return View();
+        }
+        public ActionResult BuzzerFirst()
+        {
+            return View();
+        }
+        public ActionResult BuzzerSecond()
+        {
+            return View();
+        }
+        public ActionResult BuzzerThird()
+        {
+            return View();
+        }
+        public ActionResult BuzzerFourth()
+        {
+            return View();
+        }
+        public ActionResult UltrasonikFirst()
+        {
+            return View();
+        }
+        public ActionResult UltrasonikSecond()
+        {
+            return View();
+        }
+        public ActionResult UltrasonikThird()
+        {
+            return View();
+        }
     }
 }

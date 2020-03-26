@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "UltrasonikThird";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+
+
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #10</h2>
+                <p class="lead mx-auto desc mb-5">Ultrasonik Mesafe Sensörü</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 03: Park Sensörü</h1>
+            <p style="color: green">
+                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
+                ve kurulum adımlarını takip edebilirsiniz.
+            </p>
+            <p>
+                <ul class="list-group bmd-list-group-sm">
+                    <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
+                    <li href="#" class="list-group-item">1 x Ultrasonik Mesafe Sensörü</li>
+                    <li href="#" class="list-group-item">1 x Buzzer</li>
+                    <li href="#" class="list-group-item">3 x erkek-erkek jumper kablo</li>
+                </ul>
+            </p>
+        </div>
+        <h2 class="mb-3">Devre Şeması</h2>
+        <div class="row container">
+            <div class="col-md-8">
+                <img src="../assets/images/schematic_diagrams/UltrasonikThird.png">
+            </div>
+            <div class="col-md-4" style="padding-top: 5%;">
+                <ul class="ul-check list-unstyled success">
+                    <li>
+                        Ultrasonik Mesafe Sensörü'nün Echo pinini Arduino’nun 7 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Ultrasonik Mesafe Sensörü'nün Trig pinini Arduino’nun 6 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Buzzer pinini Arduino’nun 8 numaralı pinine bağlıyoruz.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <div>
+            <li>
+                Bu uygulamada araçların park edilirken arkasına engel varsa sinyal sesi ile uyarı vermesi amaçlanmıştır.
+            </li>
+            <li>
+                Bu sinyal sesi 20cm’den itibaren başlayacak, mesafe kısaldıkça sinyal sesleri arasındaki bekleme süresi de kısalacak.
+            </li>
+            <li>
+                Buzzer sesleri mesafenin 10 katı kadar bekleyebilir.
+            </li>
+            <li>
+                Sensör ile engel arasındaki mesafe 30cm’nin altına düştüğünde her bir santimetrede mesafenin 10 katı milisaniye beklemesini söyledik.
+            </li>
+            <li>
+                30 cm 🡺 30 * 10 = 300 milisaniye
+                20 cm 🡺 20 * 10 = 200 milisaniye
+                10 cm 🡺 10 * 10 = 100 milisaniye
+            </li>
+            <li>
+                Böylelikle mesafe azaldıkça daha kısa aralıklarla buzzer sinyal vermiş oldu.
+            </li>
+        </div>
+
+
+        <iframe src=https://create.arduino.cc/editor/red-kit/228b4663-e5a6-4cb8-ab8f-f38b7ab657df/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="lesson01.html" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>

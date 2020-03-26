@@ -26,6 +26,24 @@ namespace UI.Controllers
         {
             return View();
         }
-       
+        public ActionResult Fonksiyon()
+        {
+            return View();
+        }
+        public ActionResult Buzzer()
+        {
+            return View();
+        }
+        public ActionResult Ultrasonik()
+        {
+            return View();
+        }
+        public ActionResult Proje1()
+        {
+            return View();
+        }
+
+
+
     }
 }
