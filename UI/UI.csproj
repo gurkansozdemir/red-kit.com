@@ -179,6 +179,7 @@
     <Content Include="assets\fonts\flaticon\font\flaticon.html" />
     <Content Include="assets\fonts\flaticon\font\Flaticon.svg" />
     <Content Include="assets\fonts\flaticon\font\_flaticon.css" />
+    <Content Include="assets\fonts\flaticon\license\license.html" />
     <Content Include="assets\fonts\icomoon\demo-files\demo.css" />
     <Content Include="assets\fonts\icomoon\demo-files\demo.js" />
     <Content Include="assets\fonts\icomoon\demo.html" />
@@ -390,7 +391,6 @@
     <Content Include="assets\fonts\flaticon\font\Flaticon.woff" />
     <Content Include="assets\fonts\flaticon\font\Flaticon.woff2" />
     <Content Include="assets\fonts\flaticon\font\_flaticon.scss" />
-    <Content Include="assets\fonts\flaticon\license\license.pdf" />
     <Content Include="assets\fonts\icomoon\fonts\icomoon.eot" />
     <Content Include="assets\fonts\icomoon\fonts\icomoon.ttf" />
     <Content Include="assets\fonts\icomoon\fonts\icomoon.woff" />
