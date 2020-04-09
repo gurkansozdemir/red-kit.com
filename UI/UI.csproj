@@ -214,6 +214,7 @@
     <Content Include="assets\images\component\j.PNG" />
     <Content Include="assets\images\component\k.png" />
     <Content Include="assets\images\component\l.png" />
+    <Content Include="assets\images\component\Led.png" />
     <Content Include="assets\images\component\logo şekil.png" />
     <Content Include="assets\images\component\m.png" />
     <Content Include="assets\images\component\n.png" />
@@ -245,6 +246,13 @@
     <Content Include="assets\images\iconfinder_linkedin_circle_gray_107149.png" />
     <Content Include="assets\images\iconfinder_youtube_circle_gray_107133.png" />
     <Content Include="assets\images\icons\favicon.ico" />
+    <Content Include="assets\images\install\1.PNG" />
+    <Content Include="assets\images\install\2.PNG" />
+    <Content Include="assets\images\install\3.PNG" />
+    <Content Include="assets\images\lessonContent\Fonksiyon.png" />
+    <Content Include="assets\images\lessonContent\ParametreliFonksiyon.png" />
+    <Content Include="assets\images\lessonContent\RGBDeger.png" />
+    <Content Include="assets\images\lessonContent\Ultrasonik.png" />
     <Content Include="assets\images\logo_yazili.png" />
     <Content Include="assets\images\logoşekil.png" />
     <Content Include="assets\images\red-kit_ico.ico" />
