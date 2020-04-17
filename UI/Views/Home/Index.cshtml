@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = "~/Views/LayoutPage.cshtml";
 }
 
@@ -1022,13 +1021,10 @@
 
 @if (ViewBag.PopupMessage != null)
 {
-    <script>
+    <script type="text/javascript">
 
-$(document).ready(function(){
-
-alert('@ViewBag.PopupMessage');
-
-});
-
+            window.onload = function () {
+                alert("@ViewBag.PopupMessage");
+            };
     </script>
 }

@@ -184,16 +184,25 @@
     <script src="~/assets/js/main.js "></script>
     @if (ViewBag.PopupMessage != null)
     {
-        <script>
+        <script type="text/javascript">
 
-$(document).ready(function(){
-
-alert('@ViewBag.PopupMessage');
-
-});
-
+            window.onload = function () {
+                alert("@ViewBag.PopupMessage");
+            };
         </script>
     }
+    @if ()
+    {
+
+    }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnShowModal").click(function () {
+                if ekle
+                        $("#exampleModal").modal('show');
+            });
+        });
+    </script>
 </body>
 
 </html>
