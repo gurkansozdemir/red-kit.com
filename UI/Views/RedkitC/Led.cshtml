@@ -1,7 +1,21 @@
-﻿
+﻿@using Entity
 @{
-    ViewBag.Title = "Led";
+    SignUp currentUser = Session["currentUser"] as SignUp;
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+@if (currentUser != null)
+{
+    <h2>Led</h2>
+}
+else
+{
+    ViewBag.PopupMessage = "Lütfen giriş yapınız";
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $("#exampleModal").modal('show');
+    });
+    </script>
+    //return Home/Index eklenecek
 }
 
-<h2>Led</h2>
 

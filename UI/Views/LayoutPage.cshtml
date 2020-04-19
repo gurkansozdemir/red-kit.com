@@ -155,7 +155,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Bu derse ulaşmak için üye olmanız gerekmektedir.
+                    @ViewBag.PopupMessage
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary " data-dismiss="modal">Kapat</button>
@@ -185,24 +185,11 @@
     @if (ViewBag.PopupMessage != null)
     {
         <script type="text/javascript">
-
-            window.onload = function () {
-                alert("@ViewBag.PopupMessage");
-            };
+            $(document).ready(function () {
+                $("#exampleModal").modal('show');
+            });
         </script>
     }
-    @if ()
-    {
-
-    }
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#btnShowModal").click(function () {
-                if ekle
-                        $("#exampleModal").modal('show');
-            });
-        });
-    </script>
 </body>
 
 </html>

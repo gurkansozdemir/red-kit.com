@@ -343,26 +343,15 @@
     <Content Include="Loginpage\vendor\animate\animate.css" />
     <Content Include="Loginpage\vendor\animsition\css\animsition.css" />
     <Content Include="Loginpage\vendor\animsition\css\animsition.min.css" />
-    <Content Include="Loginpage\vendor\animsition\js\animsition.js" />
-    <Content Include="Loginpage\vendor\animsition\js\animsition.min.js" />
     <Content Include="Loginpage\vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Loginpage\vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Loginpage\vendor\bootstrap\css\bootstrap-reboot.css" />
     <Content Include="Loginpage\vendor\bootstrap\css\bootstrap-reboot.min.css" />
     <Content Include="Loginpage\vendor\bootstrap\css\bootstrap.css" />
     <Content Include="Loginpage\vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Loginpage\vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="Loginpage\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Loginpage\vendor\bootstrap\js\popper.js" />
-    <Content Include="Loginpage\vendor\bootstrap\js\popper.min.js" />
-    <Content Include="Loginpage\vendor\bootstrap\js\tooltip.js" />
     <Content Include="Loginpage\vendor\countdowntime\countdowntime.js" />
     <Content Include="Loginpage\vendor\css-hamburgers\hamburgers.css" />
     <Content Include="Loginpage\vendor\css-hamburgers\hamburgers.min.css" />
-    <Content Include="Loginpage\vendor\daterangepicker\daterangepicker.css" />
-    <Content Include="Loginpage\vendor\daterangepicker\daterangepicker.js" />
-    <Content Include="Loginpage\vendor\daterangepicker\moment.js" />
-    <Content Include="Loginpage\vendor\daterangepicker\moment.min.js" />
     <Content Include="Loginpage\vendor\jquery\jquery-3.2.1.min.js" />
     <Content Include="Loginpage\vendor\perfect-scrollbar\perfect-scrollbar.css" />
     <Content Include="Loginpage\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
@@ -372,11 +361,15 @@
     <Content Include="Loginpage\vendor\select2\select2.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -671,6 +664,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Loginpage\vendor\animsition\js\" />
+    <Folder Include="Loginpage\vendor\bootstrap\js\" />
+    <Folder Include="Loginpage\vendor\daterangepicker\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Default\" />

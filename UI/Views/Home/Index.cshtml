@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Entity
+@{
+    SignUp currentUser = Session["currentUser"] as SignUp;
     Layout = "~/Views/LayoutPage.cshtml";
 }
 
@@ -147,13 +149,11 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="class-item d-flex align-items-center">
-                                    <a href="/Lesson/Led" class="class-item-thumbnail">
+                                    <a href="/RedkitC/Led" class="class-item-thumbnail">
                                         <img src="~/assets/images/component/a.png" alt="Image">
                                     </a>
                                     <div class="class-item-text">
-                                        <h2><a href="/Lesson/Led">red-kit ile Arduino #1 - LED</a></h2>
-
-
+                                        <h2><a href="/RedkitC/Led">red-kit ile Arduino #1 - LED</a></h2>
                                     </div>
                                 </div>
                                 <div class="class-item d-flex align-items-center">
@@ -530,7 +530,7 @@
                                         <img src="~/assets/images/component/a.png" alt="Image">
                                     </a>
                                     <div class="class-item-text">
-                                        <h2><a href="/Lesson/Led">red-kit ile Arduino #1 - LED</a></h2>
+                                        <h2><a href="/RedkitC/Led">red-kit ile Arduino #1 - LED</a></h2>
 
 
                                     </div>
@@ -1001,14 +1001,14 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
             </div>
             <div class="modal-body">
-                <form id="insertRow" action="/SignUp/Index" method="post">
+                <form id="insertRow" action="/SignUp/Login" method="post">
                     <input type="hidden" id="clsID" name="classroomID" />
                     <div class="form-group">
                         @*<label>Kullanıcı Adı</label>*@
-                        <input class="form-control" id="subject" name="username" placeholder="Kullanıcı Adı" required />
+                        <input class="form-control" id="username" name="username" placeholder="Kullanıcı Adı" required />
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="subject" name="password" type="Password" placeholder="Şifre" required />
+                        <input class="form-control" id="password" name="password" type="Password" placeholder="Şifre" required />
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Giriş Yap</button>
@@ -1018,13 +1018,3 @@
         </div>
     </div>
 </div>
-
-@if (ViewBag.PopupMessage != null)
-{
-    <script type="text/javascript">
-
-            window.onload = function () {
-                alert("@ViewBag.PopupMessage");
-            };
-    </script>
-}
