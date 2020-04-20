@@ -38,29 +38,44 @@ namespace UI.Controllers
                             code.IsActive = true;
                             dbContext.SignUp.Add(tmp);
                             dbContext.SaveChanges();
-                            ViewBag.PopupMessage = "Üyeliğiniz gerçekleşti.";
+                            TempData["Warning"] ="Üyeliğiniz gerçekleşti.Ders içeriklerini incelemek için lütfen giriş yapınız.";
                         }
-                        //else
-                        //{
-                        //    ViewBag.PopupMessage = "Aktivasyon kodu daha önce kullanılmıştır";
-                        //}
+                        else
+                        {
+                            TempData["Warning"] = "Aktivasyon kodu daha önce kullanılmıştır";
+                        }
                     }
                     else
                     {
-                        ViewBag.PopupMessage = "Aktivasyon kodu sistemde tanımlı değildir.Lütfen tekrar kontrol ediniz.";
+                        TempData["Warning"] = "Aktivasyon kodu sistemde tanımlı değildir.Lütfen tekrar kontrol ediniz.";
                     }
                 }
-
             }
             else
             {
-                ViewBag.PopupMessage = "Şifreler uyuşmamaktadır. Tekrar kontrol ediniz.";
+                TempData["Warning"] = "Şifreler uyuşmamaktadır. Tekrar kontrol ediniz.";
             }
             return RedirectToAction("Index", "Home");
         }
         public ActionResult Login()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Login(string username,string password)
+        {
+            SignUp currentUser = dbContext.SignUp.Where(x => x.UserName == username && x.Password == password).SingleOrDefault();
+            if (currentUser != null)
+            {
+                Session["CurrentUser"] = currentUser;
+                TempData["Warning"] = "Giriş başarılı bir şekilde gerçekleşti.";
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                TempData["Warning"] = "Kullanıcı adı veya şifre hatalı.. Lutfen tekrar deneyiniz.";
+                return View();
+            }
         }
     }
 }
