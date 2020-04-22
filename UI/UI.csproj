@@ -345,7 +345,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LessonController.cs" />
     <Compile Include="Controllers\MBlockController.cs" />
+    <Compile Include="Controllers\MblockExperimentController.cs" />
     <Compile Include="Controllers\RedkitCController.cs" />
+    <Compile Include="Controllers\RedkitCExperimentController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -563,6 +565,13 @@
     <Content Include="Views\MBlock\IR.cshtml" />
     <Content Include="Views\MBlock\Proje5.cshtml" />
     <Content Include="Views\MBlock\IR2.cshtml" />
+    <Content Include="Views\MblockExperiment\ButtonOne.cshtml" />
+    <Content Include="Views\RedkitCExperiment\ButtonOne.cshtml" />
+    <Content Include="Views\RedkitCExperiment\ButtonTwo.cshtml" />
+    <Content Include="Views\RedkitCExperiment\ButtonThree.cshtml" />
+    <Content Include="Views\RedkitCExperiment\ButtonFour.cshtml" />
+    <Content Include="Views\RedkitCExperiment\ButtonFive.cshtml" />
+    <Content Include="Views\RedkitCExperiment\ButtonSix.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

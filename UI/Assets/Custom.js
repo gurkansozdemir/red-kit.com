@@ -6,6 +6,6 @@
         window.location.href = url;
     }
     else {
-        // modal.show();
+        $("#exampleModal").modal('show');
     }
 });
