@@ -164,6 +164,7 @@
     <Content Include="assets\css\owl.theme.default.min.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\util.css" />
+    <Content Include="assets\Custom.js" />
     <Content Include="assets\dist\css\bootstrap-grid.css" />
     <Content Include="assets\dist\css\bootstrap-grid.min.css" />
     <Content Include="assets\dist\css\bootstrap-reboot.css" />

@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Entity
+@{
+    SignUp currentUser = Session["currentUser"] as SignUp;
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,7 +63,7 @@
                                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
                                 <li><a href="#classes-section" class="nav-link">Dersler</a></li>
                                 <li><a href="#card-section" class="nav-link">Deney Kartları</a></li>
-                                <li><a href="#wood-section" class="nav-link">Ahşap Setler</a></li>
+                                <li><a href="#wood-section" class="nav-link">wood-kit</a></li>
                                 <li><a href="#contact-section" class="nav-link">İletişim</a></li>
                                 <li><a href="#" data-toggle="modal" data-target="#SignUp" class="nav-link btn btn-primary">Üye Ol</a></li>
                                 <li><a href="https://www.robotluk.com/" class="nav-link btn btn-primary">Satın Al</a></li>
@@ -183,12 +187,22 @@
     <script src="~/assets/js/jquery.sticky.js "></script>
     <script src="~/assets/js/jquery.mb.YTPlayer.min.js "></script>
     <script src="~/assets/js/main.js "></script>
+    <script src="~/assets/Custom.js"></script>
     @if (ViewBag.PopupMessage != null)
     {
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#exampleModal").modal('show');
             });
+        </script>
+    }
+    @if (@currentUser != null)
+    {
+        <script>
+        $(document).ready(function () {
+                debugger
+                sessionStorage.setItem("id",@currentUser.ID);
+        });
         </script>
     }
 </body>
