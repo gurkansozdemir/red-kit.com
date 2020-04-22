@@ -241,6 +241,7 @@
     <Content Include="assets\images\lessonContent\Fonksiyon.png" />
     <Content Include="assets\images\lessonContent\ParametreliFonksiyon.png" />
     <Content Include="assets\images\lessonContent\RGBDeger.png" />
+    <Content Include="assets\images\lessonContent\termostat.jpg" />
     <Content Include="assets\images\lessonContent\Ultrasonik.png" />
     <Content Include="assets\images\logo_yazili.png" />
     <Content Include="assets\images\logoşekil.png" />
@@ -274,6 +275,7 @@
     <Content Include="assets\images\schematic_diagrams\8.2.Rgb ile Buton.png" />
     <Content Include="assets\images\schematic_diagrams\8.3.Işık Ldr ile Led ve buton.png" />
     <Content Include="assets\images\schematic_diagrams\9.1.Termometre.png" />
+    <Content Include="assets\images\schematic_diagrams\termostat.PNG" />
     <Content Include="assets\images\section.jpg" />
     <Content Include="assets\images\section_wood.jpg" />
     <Content Include="assets\images\SeriPort1.PNG" />
@@ -563,6 +565,7 @@
     <Content Include="Views\MBlock\IR.cshtml" />
     <Content Include="Views\MBlock\Proje5.cshtml" />
     <Content Include="Views\MBlock\IR2.cshtml" />
+    <Content Include="Views\Shared\redkitC.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -575,7 +578,6 @@
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\Shared\" />
     <Folder Include="Views\SignUp\" />
     <Folder Include="Views\Sign\" />
   </ItemGroup>
