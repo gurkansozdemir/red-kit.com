@@ -1,12 +1,12 @@
 ﻿$(".lesson").on('click', function (event) {
     debugger
-    var url = $(this).val();
+    var url = $(this).attr("data-url");
     var currentId = sessionStorage.getItem("id");
     if (currentId != null) {
         window.location.href = url;
     }
     else {
-        // modal.show();
+        $('#exampleModal').modal('show');
     }
 });
 
