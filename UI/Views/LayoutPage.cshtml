@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Entity
+@{
+    SignUp currentUser = Session["currentUser"] as SignUp;
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -182,12 +186,22 @@
     <script src="~/assets/js/jquery.sticky.js "></script>
     <script src="~/assets/js/jquery.mb.YTPlayer.min.js "></script>
     <script src="~/assets/js/main.js "></script>
+    <script src="~/assets/Custom.js"></script>
     @if (ViewBag.PopupMessage != null)
     {
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#exampleModal").modal('show');
             });
+        </script>
+    }
+    @if (@currentUser != null)
+    {
+        <script>
+        $(document).ready(function () {
+                debugger
+                sessionStorage.setItem("id",@currentUser.ID);
+        });
         </script>
     }
 </body>
