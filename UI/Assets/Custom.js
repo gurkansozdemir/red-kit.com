@@ -9,3 +9,7 @@
         // modal.show();
     }
 });
+
+$('.lesson').hover(function () {
+    $(this).css('cursor', 'pointer');
+});

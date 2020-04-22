@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="~/assets/css/style.css">
 
     <link rel="icon" type="image/x-icon" href="~/assets/images/red-kit_ico.ico">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
 
@@ -57,7 +58,7 @@
                     <div class="ml-auto col-md-10">
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
-                                style="font-size: smaller;">
+                                style="font-size: small;">
                                 <li><a href="#home-section" class="nav-link">Anasayfa</a></li>
                                 <li><a href="#services-section" class="nav-link">red-kit Nedir?</a></li>
                                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
@@ -65,8 +66,8 @@
                                 <li><a href="#card-section" class="nav-link">Deney Kartları</a></li>
                                 <li><a href="#wood-section" class="nav-link">wood-kit</a></li>
                                 <li><a href="#contact-section" class="nav-link">İletişim</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#SignUp" class="nav-link btn btn-primary">Üye Ol</a></li>
-                                <li><a href="https://www.robotluk.com/" class="nav-link btn btn-primary">Satın Al</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#SignUp" class="nav-link btn btn-success">Üye Ol</a></li>
+                                <li><a href="https://www.robotluk.com/" class="nav-link btn btn-danger"><i class="fa fa-shopping-cart" aria-hidden="true" style="padding-right: 5px; font-size: 15px;"></i>Satın Al</a></li>
                             </ul>
                         </nav>
                         <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right">
@@ -188,10 +189,16 @@
     <script src="~/assets/js/jquery.mb.YTPlayer.min.js "></script>
     <script src="~/assets/js/main.js "></script>
     <script src="~/assets/Custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#redkitc").addClass("show");
+        });
+    </script>
     @if (ViewBag.PopupMessage != null)
     {
         <script type="text/javascript">
             $(document).ready(function () {
+                $("#redkitc").addClass("show");
                 $("#exampleModal").modal('show');
             });
         </script>
