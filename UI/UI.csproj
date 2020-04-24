@@ -487,10 +487,10 @@
     <Content Include="Views\LayoutPage.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Lesson\Led.cshtml" />
-    <Content Include="Views\Tests\LedOne.cshtml" />
-    <Content Include="Views\Tests\LedTwo.cshtml" />
-    <Content Include="Views\Tests\LedThree.cshtml" />
-    <Content Include="Views\Tests\LedFour.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedOne.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedTwo.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedThree.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedFour.cshtml" />
     <Content Include="Views\Lesson\Buton.cshtml" />
     <Content Include="Views\Tests\ButonOne.cshtml" />
     <Content Include="Views\Tests\ButonTwo.cshtml" />

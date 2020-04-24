@@ -1,8 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "LedOne";
+    ViewBag.Title = "LedTwo";
     Layout = "~/Views/LayoutPage.cshtml";
 }
+
 
 <div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
 
@@ -21,12 +22,12 @@
 <div class="site-section">
     <div class="container">
         <div class="mb-5">
-            <h1>Deney 1: red-kit ile Led Yakma</h1>
+            <h1>Deney 02: red-kit ile Led Yakıp Söndürm</h1>
             <p style="color: green">
-                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href="https://www.arduino.cc/download_handler.php"> buraya </a> tıklayarak dosyayı indirebilir
+                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
                 ve kurulum adımlarını takip edebilirsiniz.
             </p>
-            <p>Bu deneyde red-kit kullanarak bilgisayar kontrollü bir led yakacağız.</p>
+            <p>Bu deneyde red-kit kullanarak bilgisayar kontrollü bir led yakıp söndüreceğiz.</p>
             <p>
                 <ul class="list-group bmd-list-group-sm">
                     <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
@@ -34,7 +35,6 @@
                     <li href="#" class="list-group-item">1 x usb kablosu</li>
                     <li href="#" class="list-group-item">1 x erkek - erkek jumper kablo</li>
                 </ul>
-                <a target="_blank" href="https://www.robotluk.com">Komponentleri Edinmek İçin Tıklayın</a>
             </p>
         </div>
         <h2 class="mb-3">Devre Şeması</h2>
@@ -53,18 +53,15 @@
         <h2 class="mb-3">Programlama</h2>
         <p>Deneyimizin devresini tamamladığımıza göre artık programlamaya geçebiliriz. Yapmak istediğimiz şey arduino üzerindeki 7 (ledi taktığınız pin) numaralı pine elektrik yazmak.</p>
         <p>
-            Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir. Biz 7 numaralı pinden dışarıya doğru bir enerji çıkışı sağlamak istediğimize göre bu pini çıkış pini olarak tanımlamalıyız. Hatırlarsanız led'lerin
-            OUTPUT(çıkış) komponenti olduğunu söylemiştik biz de devreye bir led bağladığımız için 7 numaralı pini OUTPUT olarak tanımlıyoruz.
+            Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir. Biz 7 numaralı pinden dışarıya doğru bir enerji çıkışı sağlamak istediğimize göre bu pini çıkış pini olarak tanımlamalıyız. Hatırlarsanız
+            led'lerin OUTPUT(çıkış) komponenti olduğunu söylemiştik biz de devreye bir led bağladığımız için 7 numaralı pini OUTPUT olarak tanımlıyoruz.
         </p>
         <p>Arduino C programlama dilince tanımlamalar setup(kurulum) kısmında yazılır, ve bu kısım kod yüklendiğinde yalnızca bir kez çalışır.</p>
         <p>pinMode(pinNo,OUTPUT/INPUT) fonksiyonu beliritlen pin numarasını giriş ya da çıkış pini olarak ayarlar.</p>
         <p>digitalWrite(pinNo, HIGH/LOW) fonksiyonu belirtilen pin numarasına 0 ya da 1 sinyali gönderir. 1 elektrik var, 0 ise elektrik yok anlamına gelir.</p>
-        <iframe src=https://create.arduino.cc/editor/red-kit/aa230b04-f3bf-4861-ae12-6cbe58fbd82a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan proje dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <iframe src=https://create.arduino.cc/editor/red-kit/d533a6b3-c746-420c-bb78-09cfbc9ea8d1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
         <div>
-            <a href="/Home/Index" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+            <a href="lesson01.html" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
         </div>
     </div>
 </div>
-
-

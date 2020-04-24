@@ -37,5 +37,21 @@ namespace UI.Controllers
         {
             return View();
         }
+        public ActionResult LedOne()
+        {
+            return View();
+        }
+        public ActionResult LedTwo()
+        {
+            return View();
+        }
+        public ActionResult LedThree()
+        {
+            return View();
+        }
+        public ActionResult LedFour()
+        {
+            return View();
+        }
     }
 }
