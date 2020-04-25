@@ -283,7 +283,6 @@
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\contact_me.js" />
     <Content Include="assets\js\contact_me.min.js" />
-    <Content Include="assets\js\Custom.js" />
     <Content Include="assets\js\freelancer.js" />
     <Content Include="assets\js\freelancer.min.js" />
     <Content Include="assets\js\google-map.js" />
@@ -324,6 +323,7 @@
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile10.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile11.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile12.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile4.pubxml" />
