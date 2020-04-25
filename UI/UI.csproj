@@ -241,6 +241,7 @@
     <Content Include="assets\images\lessonContent\Fonksiyon.png" />
     <Content Include="assets\images\lessonContent\ParametreliFonksiyon.png" />
     <Content Include="assets\images\lessonContent\RGBDeger.png" />
+    <Content Include="assets\images\lessonContent\termostat.jpg" />
     <Content Include="assets\images\lessonContent\Ultrasonik.png" />
     <Content Include="assets\images\logo_yazili.png" />
     <Content Include="assets\images\logoşekil.png" />
@@ -274,6 +275,7 @@
     <Content Include="assets\images\schematic_diagrams\8.2.Rgb ile Buton.png" />
     <Content Include="assets\images\schematic_diagrams\8.3.Işık Ldr ile Led ve buton.png" />
     <Content Include="assets\images\schematic_diagrams\9.1.Termometre.png" />
+    <Content Include="assets\images\schematic_diagrams\termostat.PNG" />
     <Content Include="assets\images\section.jpg" />
     <Content Include="assets\images\section_wood.jpg" />
     <Content Include="assets\images\SeriPort1.PNG" />
@@ -485,10 +487,10 @@
     <Content Include="Views\LayoutPage.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Lesson\Led.cshtml" />
-    <Content Include="Views\Tests\LedOne.cshtml" />
-    <Content Include="Views\Tests\LedTwo.cshtml" />
-    <Content Include="Views\Tests\LedThree.cshtml" />
-    <Content Include="Views\Tests\LedFour.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedOne.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedTwo.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedThree.cshtml" />
+    <Content Include="Views\RedkitCExperiment\LedFour.cshtml" />
     <Content Include="Views\Lesson\Buton.cshtml" />
     <Content Include="Views\Tests\ButonOne.cshtml" />
     <Content Include="Views\Tests\ButonTwo.cshtml" />
@@ -572,6 +574,7 @@
     <Content Include="Views\RedkitCExperiment\ButtonFour.cshtml" />
     <Content Include="Views\RedkitCExperiment\ButtonFive.cshtml" />
     <Content Include="Views\RedkitCExperiment\ButtonSix.cshtml" />
+    <Content Include="Views\Shared\redkitC.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -584,7 +587,6 @@
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\Shared\" />
     <Folder Include="Views\SignUp\" />
     <Folder Include="Views\Sign\" />
   </ItemGroup>
