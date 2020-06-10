@@ -11,8 +11,18 @@ namespace UI.Controllers
     {
         // GET: Home
         public ActionResult Index()
+
+
+
         {
-            ViewBag.PopupMessage = TempData["Warning"];
+            if (TempData["Success"]!=null)
+            {
+                ViewBag.PopupMessage = TempData["Success"];
+            }
+            else if(TempData["Warning"] != null)
+            {
+                ViewBag.PopupMessage = TempData["Warning"];
+            }
             RedKitContext cnt = new RedKitContext();
             //List<SignUp> test = cnt.SignUp.ToList();
             return View();

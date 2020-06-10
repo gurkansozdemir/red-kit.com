@@ -59,7 +59,7 @@ namespace UI.Controllers
         }
         public ActionResult Login()
         {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
         [HttpPost]
         public ActionResult Login(string username,string password)
@@ -68,13 +68,13 @@ namespace UI.Controllers
             if (currentUser != null)
             {
                 Session["CurrentUser"] = currentUser;
-                TempData["Warning"] = "Giriş başarılı bir şekilde gerçekleşti.";
+                TempData["Success"] = "Giriş başarılı bir şekilde gerçekleşti.";
                 return RedirectToAction("Index", "Home");
             }
             else
             {
                 TempData["Warning"] = "Kullanıcı adı veya şifre hatalı.. Lutfen tekrar deneyiniz.";
-                return View();
+                return RedirectToAction("Index", "Home");
             }
         }
     }

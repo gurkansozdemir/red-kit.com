@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "MesafeSensörüOne";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #10</h2>
+                <p class="lead mx-auto desc mb-5"> Bu derste arduino ile Mesafe Sensörünü kodlamayı öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 01: Mesafeyi Yakalayalım</h1>
+            <p style="color: green">
+                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
+                ve kurulum adımlarını takip edebilirsiniz.
+            </p>
+            <p>
+                <ul class="list-group bmd-list-group-sm">
+                    <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
+                    <li href="#" class="list-group-item">1 x red-kit</li>
+                    <li href="#" class="list-group-item">1 x usb kablosu</li>
+                    <li href="#" class="list-group-item">1 x Mesafe Sensörü</li>
+                    <li href="#" class="list-group-item">2 x erkek - erkek jumper kablo</li>
+                </ul>
+            </p>
+        </div>
+        <h2 class="mb-3">Devre Şeması</h2>
+        <p>
+            Red-Kit kutu içerisinden çıkan ultrasonik mesafe sensörünü gözleri dışa bakacak şekilde bağlıyoruz.
+
+
+        </p>
+
+        <div class="row container">
+            <div class="col-md-8">
+                <img src="../assets/images/schematic_diagrams/5.1.Mesafe Sensörü.png">
+            </div>
+            <div class="col-md-4" style="padding-top: 5%;">
+                <ul class="ul-check list-unstyled success">
+                    <li>red-Kit üzerindeki echo ve trig pinlerini Arduino’nun 7. ve 6. pinlerine bağlıyoruz.</li>
+
+                </ul>
+            </div>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <p>Deneyimizin devresini tamamladığımıza göre artık programlamaya geçebiliriz. Yapmak istediğimiz şey arduino üzerindeki 6ve 7 numaralı pine elektrik yazmak.</p>
+        <p>
+            Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir.Trig pinini OUPUT, echo pinini INPUT olarak tanımladık.
+
+        </p>
+        <p>Arduino C programlama dilince tanımlamalar setup(kurulum) kısmında yazılır, ve bu kısım kod yüklendiğinde yalnızca bir kez çalışır.</p>
+        <p>Arduino C programlama dilince tekrar etmesini istediğimiz kodlar loop(döngü) kısmında yazılır, ve bu kısım kod yüklendiğinde döngü boyunca çalışır.</p>
+        <p>pinMode(pinNo,OUTPUT/INPUT) fonksiyonu beliritlen pin numarasını giriş ya da çıkış pini olarak ayarlar.</p>
+        <p>digitalWrite(pinNo, HIGH/LOW) fonksiyonu belirtilen pin numarasına 0 ya da 1 sinyali gönderir. 1 elektrik var, 0 ise elektrik yok anlamına gelir.</p>
+        <p>Serial.print(değişkenadı); fonksiyonu belirtilen değişken değerimizi seriport ekranında yazdırır </p>
+
+        <p>
+
+            Trig pinini HIGH yaptığımızda sensör ses dalgaları göndermeye başlar okuma yapmak için ses dalgalarını kısa aralıklarla göndermek gerektiğinden trig pinini önce HIGH çok kısa bir süre sonra LOW yaptık.
+            1 milisaniye = 1000 mikrosaniye
+            pulseIn() metodu, bir pinin HIGH ya da LOW olana kadar geçen süreyi verir. Echo pinine bir ses dalgası çarptığında HIGH olacaktır ses dalgası çarpana kadar geçen süreyi pulseIn() fonksiyonu ile yakaladık.
+
+        </p>
+        <iframe src=https://create.arduino.cc/editor/red-kit/6dd5ea1a-bcf0-4427-9009-002d9cc64002/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="/RedkitC/MesafeSensoru" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>

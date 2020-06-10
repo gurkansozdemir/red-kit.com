@@ -1,7 +1,93 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "MesafeSensoru";
 }
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #10</h2>
+                <p class="lead mx-auto desc mb-5">Bu derste arduino ile Mesafe Sensörünü kodlamayı öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>MesafeSensoru</h2>
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Ders #10: Ultrasonik Mesafe Sensörü </h1>
+            <p>
+                Önüne gelen engel ile arasındaki mesafeyi ölçen bir sensördür.Bu ölçme işlemini ses dalgaları yardımı ile yapar.Sensör gözlerinin birinden ses dalgası gönderir diğerinden ise engele çarpıp geri dönen ses dalgasını yakalar.
+                Bu işlem sırasında geçen zamanın yarısı ses dalgasının engele ulaştığı süreyi verir.Sesin hızı 0°C derecede 331 m/s’dir.(Metre / Saniye)
+                20°C’de ses hızı 29.1 us/cm’ye ulaşır. (Mikrosaniye / Santimetre).Hesaplanan süre / 29.1 aradaki mesafeyi bulmamızı sağlar.
 
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Mesafe Sensörü Nedir? Nasıl Çalışır?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/assets/images/lessonContent/mesafesensörü.png" width="270" height="200" />
+                </div>
+                <div class="col-md-9" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>
+                            Ultrasonik mesafe sensörü pinlerinden echo ve trig pinleri mesafeyi ölçmek için kullanacağımız pinlerdir.
+                        </li>
+                        <li>
+                            Trig pini ses dalgası göndermek için kullanılır, echo pini ise engele çarpıp gelen ses dalgasını okumak için kullanılır.
+                        </li>
+                    </ul>
+
+                </div>
+                <h2> Nerede Kullanılır ?</h2>
+                <p>
+                    Endüstriyel uygulamalarda konveyör sistemlerinde, otomobillerde park sensörleri olarak, ve mobil araçlarda ekran kontrolü yapmak amacıyla kullanılmaktadırlar.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section" id="exp-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-8  section-heading">
+                <span class="subheading">Deneyler</span>
+                <h2 class="heading mb-3">Bu Derste Yaptığımız Deneyler</h2>
+                <p>Derste izlemiş olduğunuz deneylerli aşağıda daha detaylı inceleyebilir kod dosyasını bilgisayarınıza indirebilirsiniz.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonOne" class="class-item-thumbnail">
+                        <img src="../assets/images/component/Ultrasonikms.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/MesafeOne">Deney #1: Mesafeyi Yakalayalım </a></h2>
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonThree" class="class-item-thumbnail">
+                        <img src="../assets/images/component/Ultrasonikms.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/MesafeThree">Deney #3: Park Sensörü</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonTwo" class="class-item-thumbnail">
+                        <img src="../assets/images/component/Ultrasonikms.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/MesafeTwo">Deney #2:Yaklaşınca Yanan Led </a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+@{
+    Html.RenderPartial("redkitC");
+}

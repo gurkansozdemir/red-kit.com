@@ -21,15 +21,12 @@
     <div class="container">
         <div class="mb-5">
             <h1>Deney 02: red-kit ile Buton Okuma</h1>
-            <p style="color: green">
-                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
-                ve kurulum adımlarını takip edebilirsiniz.
-            </p>
             <p>Bu deneyde red-kit kullanarak bilgisayar kontrollü ile Butonun bilgisayar üzerindeki değerini okyacağız.</p>
             <p>
                 <ul class="list-group bmd-list-group-sm">
                     <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
                     <li href="#" class="list-group-item">1 x red-kit</li>
+                    <li href="#" class="list-group-item">1 x Buton</li>
                     <li href="#" class="list-group-item">1 x usb kablosu</li>
                     <li href="#" class="list-group-item">1 x erkek - erkek jumper kablo</li>
                 </ul>
@@ -51,7 +48,7 @@
         <h2 class="mb-3">Programlama</h2>
         <p>Deneyimizin devresini tamamladığımıza göre artık programlamaya geçebiliriz. Yapmak istediğimiz şey arduino üzerindeki 6 (butonu taktığınız pin) numaralı pine elektrik yazmak.</p>
         <p>
-            Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir. Biz 7 numaralı pinden dışarıya doğru bir enerji alımı sağlamak istediğimize göre bu pini giriş pini olarak tanımlamalıyız. Hatırlarsanız
+            Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir. Biz 6 numaralı pinden dışarıya doğru bir enerji alımı sağlamak istediğimize göre bu pini giriş pini olarak tanımlamalıyız. Hatırlarsanız
             Buton'ların INPUT(giriş) komponenti olduğunu söylemiştik biz de devreye bir buton bağladığımız için 6 numaralı pini INPUT olarak tanımlıyoruz.
         </p>
         <p>Arduino C programlama dilince tanımlamalar setup(kurulum) kısmında yazılır, ve bu kısım kod yüklendiğinde yalnızca bir kez çalışır.</p>

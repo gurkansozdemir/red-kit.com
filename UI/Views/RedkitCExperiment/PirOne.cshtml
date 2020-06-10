@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "PirOne";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #20</h2>
+                <p class="lead mx-auto desc mb-5">Pır Sensörü</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 01: Fotosel Lamba</h1>
+            <p style="color: green">
+                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
+                ve kurulum adımlarını takip edebilirsiniz.
+            </p>
+            <p>
+                Apartman girişlerinde, halka açık alanlarda otomatik açılan lambalar görmüşsünüzdür.
+            </p>
+            <p>
+                Bu lambalar elektrik tasarrufu etmek için üretilmiştir. Dolayısıyla sadece bir hareket algılandığında yanacak şekilde ayarlanmalıdır.
+                Şimdi gelin kendi fotosel lambamızı yapalım.
+            </p>
+            <ul class="list-group bmd-list-group-sm">
+                <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
+                <li href="#" class="list-group-item">1 x Pır Sensörü</li>
+                <li href="#" class="list-group-item">1 x Led</li>
+                <li href="#" class="list-group-item">4 x erkek-erkek jumper kablo</li>
+            </ul>
+            </p>
+        </div>
+        <h2 class="mb-3">Devre Şeması</h2>
+        <p>
+            Hareket sensörünü şekilde görüldüğü gibi red-kit üzerine bağlayalım.
+        </p>
+        <div class="row container">
+            <div class="col-md-8">
+                <img src="../assets/images/lessonContent/pirOne.PNG">
+            </div>
+            <div class="col-md-4" style="padding-top: 5%;">
+                <ul class="ul-check list-unstyled success">
+                    <li>
+                        Sensör ile red-kit arasındaki bağlantı için dişi-erkek kabloya ihtiyacınız olacaktır.
+                    </li>
+                    <li>
+                        Erkek-Erkek ve Dişi-Dişi kabloları uç uca birleştirerek Dişi-Erkek kablo elde edebilirsiniz.
+                    </li>
+                    <li>
+                        Sensörden gelen değeri dijital olarak okuyacağız için dijital pinlerden 6’ya takalım.
+                    </li>
+                    <li>
+                        Led’i 5 numaralı pine bağlayalım.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <div>
+            <li>
+                PIR sensoru INPUT, led OUTPUT olarak tanımladı.
+            </li>
+            <li>
+                PIR sensorunden digital(0 ya da 1) olarak okunan değer if ile kontrol edildi.
+            </li>
+            <li>
+                Gelen değer HIGH (1) ise led’i yakması, değil ise söndürmesi söylendi.
+            </li>
+        </div>
+        <iframe src=https://create.arduino.cc/editor/red-kit/0a776ba6-2132-4d5e-8ddf-9b39f8ff0b00/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="~/RedkitC/PIR" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>

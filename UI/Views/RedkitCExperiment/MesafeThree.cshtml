@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "MesafeSensörüThree";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #10</h2>
+                <p class="lead mx-auto desc mb-5"> Bu derste arduino ile Mesafe Sensörünü kodlamayı öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 03: Park Sensörü </h1>
+            <p style="color: green">
+                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
+                ve kurulum adımlarını takip edebilirsiniz.
+            </p>
+            <p>
+
+                Bu uygulamamız araçların park edilirken arkasına engel varsa sinyal sesi ile uyarı vermesi amaçlanmıştır.
+
+            </p>
+            <p>
+                <ul class="list-group bmd-list-group-sm">
+                    <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
+                    <li href="#" class="list-group-item">1 x red-kit</li>
+                    <li href="#" class="list-group-item">1 x usb kablosu</li>
+                    <li href="#" class="list-group-item">1 x Mesafe Sensörü</li>
+                    <li href="#" class="list-group-item">3 x erkek - erkek jumper kablo</li>
+                </ul>
+            </p>
+        </div>
+        <h2 class="mb-3">Devre Şeması</h2>
+        <p>
+            Red-Kit kutu içerisinden çıkan ultrasonik mesafe sensörünü gözleri dışa bakacak şekilde bağlıyoruz.
+
+
+
+
+        </p>
+
+        <div class="row container">
+            <div class="col-md-8">
+                <img src="../assets/images/schematic_diagrams/5.3.ParkSensörü.png">
+            </div>
+            <div class="col-md-4" style="padding-top: 5%;">
+                <ul class="ul-check list-unstyled success">
+                    <li>red-Kit üzerindeki echo ve trig pinlerini Arduino’nun 7. ve 6. pinlerine bağlayoruz.</li>
+                    <li> red-Kit üzerindeki buzzerı mı 8.pine bağlıyoruz.</li>
+
+
+                </ul>
+            </div>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <p>Deneyimizin devresini tamamladığımıza göre artık programlamaya geçebiliriz. Yapmak istediğimiz şey araçların park edilirken arkasına engel varsa sinyal sesi ile kalan mesafeye göre buzzerla uyarmak </p>
+        <p>
+            Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir.Trig pinini ve buzzer'ı OUPUT, echo pinini INPUT olarak tanımladık.
+
+        </p>
+
+
+        <p>Arduino C programlama dilince tanımlamalar setup(kurulum) kısmında yazılır, ve bu kısım kod yüklendiğinde yalnızca bir kez çalışır.</p>
+        <p>Arduino C programlama dilince tekrar etmesini istediğimiz kodlar loop(döngü) kısmında yazılır, ve bu kısım kod yüklendiğinde döngü boyunca çalışır.</p>
+        <p>pinMode(pinNo,OUTPUT/INPUT) fonksiyonu beliritlen pin numarasını giriş ya da çıkış pini olarak ayarlar.</p>
+        <p>digitalWrite(pinNo, HIGH/LOW) fonksiyonu belirtilen pin numarasına 0 ya da 1 sinyali gönderir. 1 elektrik var, 0 ise elektrik yok anlamına gelir.</p>
+        <p>Serial.print(değişkenadı); fonksiyonu belirtilen değişken değerimizi seriport ekranında yazdırır </p>
+
+        <p>
+
+            Buzzerımızın sinyal sesi 20cm’den itibaren başlayacak, mesafe kısaldıkça sinyal sesleri arasındaki bekleme süresi de kısalacak.
+            Buzzer sesleri mesafenin 10 katı kadar bekleyebilir.
+            Sensör ile engel arasındaki mesafe 30cm’nin altına düştüğünde her bir santimetrede mesafenin 10 katı milisaniye beklemesini söyledik.
+        </p>
+
+        <p> 30 cm 🡺 30 * 10 = 300 milisaniye</p>
+        <p>20 cm 🡺 20 * 10 = 200 milisaniye</p>
+        <p> 10 cm 🡺 10 * 10 = 100 milisaniye</p>
+        <p>Böylelikle mesafe azaldıkça daha kısa aralıklarla buzzer sinyal vermiş oldu.</p>
+
+
+        </p>
+        <iframe src=https://create.arduino.cc/editor/red-kit/7a1891ba-a3c2-49ad-8eb1-dadc11341236/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="/RedkitC/MesafeSensoru" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>

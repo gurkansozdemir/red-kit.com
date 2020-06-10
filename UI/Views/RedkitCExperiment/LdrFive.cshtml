@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "LdrFive";
+
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+
+
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #17</h2>
+                <p class="lead mx-auto desc mb-5">Bu derste ışık sensörünün çalışma mantığını öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 05: Otomatik Ekran Parlaklığı</h1>
+            <p>
+                Cep telefonu ekranlarınızın aydınlık ortama girdiğinizde daha fazla parlaklık, karanlıkta daha az parlaklık sağladığını fark ettiniz mi?
+                Biz de 5110 ekrandaki parlaklığı ortam ışığına göre ayarlayalım.
+            </p>
+            <p>
+                <ul class="list-group bmd-list-group-sm">
+                    <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
+                    <li href="#" class="list-group-item">1 x red-kit</li>
+                    <li href="#" class="list-group-item">1 x usb kablosu</li>
+                    <li href="#" class="list-group-item">7 x erkek - erkek jumper kablo</li>
+                    <li href="#" class="list-group-item">1 x LDR</li>
+                </ul>
+            </p>
+        </div>
+        <h2 class="mb-3">Devre Şeması</h2>
+        <p>
+            Red-Kit üzerine kutunuzdan çıkan LDR sensörünü bağlayın ve
+            "IŞIK" yazan pinden Arduino üzerindeki A0 analog pinine jumper kablo çekin.
+            5110 ekranın BL(Back Light) pini arkaplan ışığı anlamına gelmektedir.
+            BL ışığının parlaklığı PWM pinleri ile kontrol edebilmek için BL pinini 6 PWM pinine bağladık.
+        </p>
+        <div class="row container">
+            <div class="col-md-8">
+                <img src="~/assets/images/lessonContent/ldr5.PNG" />
+            </div>
+            <div class="col-md-4" style="padding-top: 5%;">
+                <ul class="ul-check list-unstyled success">
+                    <li>Sensörü red-kit üzerine yandaki örnekte görüldüğü gibi yerleştiriyoruz.</li>
+                    <li>Sensörden değer okumak için veri pinini arduino üzerindeki A0 analog pine bağlıyoruz.</li>
+
+                    <li>
+                        LCD ekranın bağlantısı ;
+                        <p>
+                            RST - Pin 11<br>
+                            CE - Pin 12<br>
+                            DC - Pin 10<br>
+                            DIN - Pin 9<br>
+                            CLK - Pin 8<br>
+                            BL - Pin 6<br>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <p>Deneyimizin devresini tamamladığımıza göre artık programlamaya geçebiliriz.</p>
+        <p>
+            1-LDR ile ortamdaki ışık miktarı okundu.
+        </p>
+        <p>
+            2-Map komutu ile LDR değeri 0-255 arasına çekildi.
+        </p>
+
+        <p>
+            3-5110 ekranın BL (Arkaplan) ışığına LDR’den alınan değer tandı.
+        </p>
+
+        <iframe src=https://create.arduino.cc/editor/red-kit/bf09de68-e3cb-481b-a7b2-5d6f75df9e1e/preview style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="/RedkitC/LDR" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>

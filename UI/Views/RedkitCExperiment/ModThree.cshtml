@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "ModThird";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #5</h2>
+                <p class="lead mx-auto desc mb-5">Mod</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 03: Moda Göre Led</h1>
+            <p style="color: green">
+                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
+                ve kurulum adımlarını takip edebilirsiniz.
+            </p>
+            <p>
+                <ul class="list-group bmd-list-group-sm">
+                    <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
+                    <li href="#" class="list-group-item">1 x Potansiyometre</li>
+                    <li href="#" class="list-group-item">6 x Led</li>
+                    <li href="#" class="list-group-item">7 x erkek-erkek jumper kablo</li>
+                </ul>
+            </p>
+        </div>
+        <h2 class="mb-3">Devre Şeması</h2>
+        <div class="row container">
+            <div class="col-md-8">
+                <img src="../assets/images/schematic_diagrams/mod3.PNG">
+            </div>
+            <div class="col-md-4" style="padding-top: 5%;">
+                <ul class="ul-check list-unstyled success">
+                    <li>
+                        Pot’u Arduino’nun A0 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Led 1’i Arduino’nun 8 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Led 2’yi Arduino’nun 9 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Led 3’ü Arduino’nun 10 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Led 4’ü Arduino’nun 11 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Led 5’i Arduino’nun 12 numaralı pinine bağlıyoruz.
+                    </li>
+                    <li>
+                        Led 6’yı Arduino’nun 13 numaralı pinine bağlıyoruz.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <div>
+            <li>
+                Potansiyometre pinini tanımlıyoruz.
+            </li>
+            <li>
+                Ledlerin takıldığı pinlerden çıkış alacağımızı belirtiyoruz.
+            </li>
+            <li>
+                Potansiyometreden okunan değerin 6’ya göre modunu hesaplayıp bir değişkende tuttuk.
+            </li>
+            <p>
+                <li> Değişkendeki değer;</li>
+                <li>0 ise;</li>
+                <li>8 numaralı pindeki ledi (1.Led) yaktık.</li>
+                <li>1 ise;</li>
+                <li>9 numaralı pindeki ledi (2.Led) yaktık.</li>
+                Bu işlem 6. Lede kadar devam ettirildi.Önceden yanan ledin sönmesi için her bir led yandığında tüm ledleri söndürdük.
+            </p>
+        </div>
+
+        <iframe src=https://create.arduino.cc/editor/red-kit/0b28307d-238a-4aa7-ba6f-aec8cb37f0be/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="/RedkitC/Mod" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>

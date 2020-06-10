@@ -6,8 +6,10 @@
     <div class="container">
         <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-                <h2 class="">red-kit ile Arduino Programlamaya Giriş #28</h2>
-                <p class="lead mx-auto desc mb-5">Bu derste bir Termostat nasıl çalışır öğrencek ve kendi termostatımızı yapacağız.</p>
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #06</h2>
+                <p class="lead mx-auto desc mb-5">
+                    Bu projede amaç sıra sıra yanıp sönen ledlerde yeşil lede gelmeden butona basıp yakalamaya çalışacağımız bir oyun tasarlamaktır.
+                </p>
             </div>
         </div>
     </div>
@@ -16,81 +18,61 @@
 <div class="site-section">
     <div class="container">
         <div class="mb-5">
-            <h1>Ders #28: Termostat Projesi</h1>
+            <h1>Ders #06: Led Yakalama Oyunu</h1>
             <p>
-                Bu projede ortamdaki ısı miktarı, dinamik olarak ayarlanan seviyenin üstüne çıktığında, sesli ve ışıklı uyarı vermesi amaçlanmıştır.
+                Bu projede amaç sıra sıra yanıp sönen ledlerde yeşil lede gelmeden butona basıp yakalamaya çalışacağımız bir oyun tasarlamaktır.
+                Ledi yakaladığınız taktirde birkaç kez tüm ledler yanıp sönmelidir.
+                Ledler her doğru yakalamada daha hızlı yanıp sönmeye başlamalıdır.
+                En hızlı halinde oyunu bitirirseniz ledlerin hepsi yanmış vaziyette beklemelidir.
             </p>
-        </div>
-        <div class="mb-5">
-            <h2>Termostat Nedir? Nasıl Çalışır?</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="~/Assets/images/lessonContent/termostat.jpg" style="width:100%; height:auto;" />
-                </div>
-                <div class="col-md-9">
-                    <p>
-                        Isıtma ya da soğutma sistemleri ile birlikte kullanılan ve sıcaklığın istenen bir düzeyde tutulmasını sağlayan parça termostat olarak adlandırılır.
-                        Termostatlar gerektiğinde devreye giren ve gerekmediğinde de devre dışı kalan bir mekanizmaya sahip olacak şekilde üretiliyor.
-                        Isı düzeyi istenen seviyeye geldiğinde duran ve ısı düştüğünde yeniden çalışan termostatlar enerji kullanımında ekonomik olmalarıyla da dikkat çekiyor.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="mb-5">
-            <h2>Nerede Kullanılır?</h2>
-            <p>Buzdolapları, kombiler gibi ortamdaki ısıya göre hareket etmesi gereken cihazlarda tersmostat kullanılır.</p>
         </div>
         <div class="mb-5">
             <h2>Proje Algoritması</h2>
             <ul class="ul-check list-unstyled success">
-                <li>DHT11'den değer okunur ve LCD 5110 ekranda yazdırılır.</li>
-                <li>Potansiyometreden değer okunur, 0-100 aralığına oranlanır ve LCD 5110 ekranda yazdırılır.</li>
-                <li>Kullanıcı butona bastığında potansiyometredeki değer bir değişkende saklanır. Bu değer bizim sınır değerimiz olur.</li>
-                <li>DHT11'den okunan sıcaklık değeri kullanıcının belirlediği sınır değerinin altında olup olmadığı kontrol edilir.</li>
-                <li>Sıcaklık sınır değerinin altında düştü ise led ve buzzer yanıp sönerek sinyal verir.</li>
+                <li>Öncelikle ledleri sıra sıra yanması için bir döngü tasarlıyoruz.</li>
+                <li>Daha sonra yakalamak istediğimiz ledde butona basılı olup olmadığını kontrol ediyoruz.</li>
+                <li>Eğer basılı ise ledlerimizi yakıp söndürüyoruz.</li>
+                <li>Daha sonra ise bekleme süremizi bir miktar azaltıyoruz.</li>
             </ul>
         </div>
         <div class="mb-5">
             <h2>Proje Devresi</h2>
             <p>Erkek-erkek uçlu bir jumper kablonun bir ucunu red-kit üzerindeki led pinlerinden yakmak istediğimiz sıradaki lede, diğer ucunu arduino üzerindeki dijital pinlerden kontrol etmek istediğimiz pine takıyoruz.</p>
-            <p>Not: Aşağıdaki örnekte 7 numaralı dijital pin kullanılmıştır. Hangi pine taktıysanız kodunuzu buna göre yazmanız gerekecektir.</p>
+            <p>Not: Aşağıdaki örnekte 8- 13 numaralı dijital pinler kullanılmıştır. Hangi pinlere taktıysanız kodunuzu buna göre yazmanız gerekecektir.</p>
             <div class="row container">
                 <div class="col-md-8">
-                    <img src="../assets/images/schematic_diagrams/termostat.PNG" style="width: 100%; height: auto;">
+                    <img src="../assets/images/lessonContent/proje1devre.PNG" style="width: 100%; height: auto;">
                 </div>
                 <div class="col-md-4" style="padding-top: 5%;">
                     <ul class="ul-check list-unstyled success">
                         <li>
-                            LCD 5110 Bağlantıları
+                            Led Bağlantıları
                             <ul class="ul-check list-unstyled success">
-                                <li>RST 🡺 11</li>
-                                <li>CE 🡺 12</li>
-                                <li>DC 🡺 10</li>
-                                <li>DIN 🡺 9</li>
-                                <li>BL 🡺 13</li>
-                                <li>RST 🡺 11</li>
+                                <li>Led 1 🡺 8</li>
+                                <li>Led 2 🡺 9</li>
+                                <li>Led 3 🡺 10</li>
+                                <li>Led 4 🡺 11</li>
+                                <li>Led 5 🡺 12</li>
+                                <li>Led 6 🡺 13</li>
                             </ul>
                         </li>
-                        <li>DHT11 🡺 2</li>
-                        <li>Led & Buzzer 🡺 3</li>
-                        <li>Switch 🡺 4</li>
-                        <li>Buton4 🡺 5</li>
-                        <li>Potansiyometre 🡺 A0</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="mb-5">
             <h2>Projenin Programlanması</h2>
-            <p>Deneyimizin devresini tamamladığımıza göre artık programlamaya geçebiliriz. Yapmak istediğimiz şey arduino üzerindeki 7 (ledi taktığınız pin) numaralı pine elektrik yazmak.</p>
             <p>
-                Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir. Biz 7 numaralı pinden dışarıya doğru bir enerji çıkışı sağlamak istediğimize göre bu pini çıkış pini olarak tanımlamalıyız. Hatırlarsanız led'lerin
-                OUTPUT(çıkış) komponenti olduğunu söylemiştik biz de devreye bir led bağladığımız için 7 numaralı pini OUTPUT olarak tanımlıyoruz.
+                Deneyimizin devresini tamamladığımıza göre artık programlamaya geçebiliriz. Yapmak istediğimiz şey sıra sıra yanıp sönen ledlerde yeşil lede gelmeden butona basıp yakalamaya çalışacağımız bir oyun tasarlamaktır.
             </p>
-            <p>Arduino C programlama dilince tanımlamalar setup(kurulum) kısmında yazılır, ve bu kısım kod yüklendiğinde yalnızca bir kez çalışır.</p>
-            <p>pinMode(pinNo,OUTPUT/INPUT) fonksiyonu beliritlen pin numarasını giriş ya da çıkış pini olarak ayarlar.</p>
-            <p>digitalWrite(pinNo, HIGH/LOW) fonksiyonu belirtilen pin numarasına 0 ya da 1 sinyali gönderir. 1 elektrik var, 0 ise elektrik yok anlamına gelir.</p>
-            <iframe src=https://create.arduino.cc/editor/red-kit/e86b147c-3c32-4b2f-b238-9973dcf0264d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p>
+                Öncelikle arduino üzerindeki hangi pinin, nasıl çalışacağını(INPUT/OUTPUT) söylememiz gerekir. Biz 7-13 numaralı pinlere led bağladığımız OUTPUT(Çıkış) olarak tanımladık.
+           7 numaralı pine buton bağladığımız için INPUT olarak tanımladık.
+            </p>
+            <p>Ledlerimizi loop döngüsü içerisinde sırayla yakıp söndürdük.</p>
+            <p>Koşulumuzu ekledik : Eğer yeşil lamba yanıyorsa (12 numaralı pin) ve buton basılı ise tüm ledler iki defa yanıp sönecek</p>
+            <p></p>
+            <iframe src=https://create.arduino.cc/editor/red-kit/3b8c3a60-ba73-4a06-aca0-57523fa27849/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
             <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan proje dosyasını bilgisayarınıza indirebilirsiniz. </p>
         </div>
     </div>

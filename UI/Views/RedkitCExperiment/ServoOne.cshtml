@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "ServoOne";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #19</h2>
+                <p class="lead mx-auto desc mb-5">Servo Motor</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 01: Potansiyometre ile Servo Motor</h1>
+            <p style="color: green">
+                Bu deneyi yapmak için öncelikle bilgisayarınızda Arduino IDE programlama ortamı ve sürücülerinin kurulu olması gerekir. Eğer henüz gerekli yazılımları indirip kurmadıysanız <a href=lesson01.html> buraya </a> tıklayarak dosyayı indirebilir
+                ve kurulum adımlarını takip edebilirsiniz.
+            </p>
+
+            <ul class="list-group bmd-list-group-sm">
+                <li class="list-group-item" style="color: red;">Kullanılacak Komponentler</li>
+                <li href="#" class="list-group-item">1 x Servo Motor</li>
+                <li href="#" class="list-group-item">1 x Potansiyometre</li>
+                <li href="#" class="list-group-item">4 x erkek-erkek jumper kablo</li>
+            </ul>
+            </p>
+        </div>
+        <h2 class="mb-3">Devre Şeması</h2>
+        <p>
+            Erkek-erkek uçlu jumper kablonun bir ucunu red-kit üzerindeki
+            GND pinine, diğerini servo motorun kahverengi kablosuna,
+            ikinci jumper kablonun bir ucunu 5V pinine, diğerini servo motorun kırmızı kablosuna,
+            üçüncü jumper kablonun bir ucunu PWM pinlerinden 9 numaralı pine, diğerini servo motorun sarı kablosuna
+            takıyoruz.
+        </p>
+        <div class="row container">
+            <div class="col-md-8">
+                <img src="../assets/images/schematic_diagrams/servo1.PNG">
+            </div>
+            <div class="col-md-4" style="padding-top: 5%;">
+                <ul class="ul-check list-unstyled success">
+                    <li>
+                        Potansiyometrenin pinlerinden birini A0 numaralı pinine bağlıyoruz.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <div>
+            <li>
+                Ultrasonik mesafe sensörü ile engel ile arasındaki mesafeyi ölçtük.
+            </li>
+            <li>
+                Mesafe 10cm’nin altına düştüğünde otopark kapısını tetiklemesi için servo motoru 180 dereceye çevirdik.
+            </li>
+            <li>
+                Araç kapıdan uzaklaştığında servo motor tekrar 0 dereceye ayarlandı.
+            </li>
+        </div>
+        <iframe src=https://create.arduino.cc/editor/red-kit/c73a94dc-0278-43f0-b4b3-ef7217744603/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="~/RedkitC/ServoMotor" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>

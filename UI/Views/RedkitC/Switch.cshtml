@@ -8,30 +8,40 @@
         <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
                 <h2 class="">red-kit ile Arduino Programlamaya Giriş #3</h2>
-                <p class="lead mx-auto desc mb-5">Bu derste Switch komponentimizi tanıyacağız aynı zamanda değişkenin ne demek olduğunu ve mantıksal operatörlerşn neler olduğunu öğreneceğiz.</p>
+                <p class="lead mx-auto desc mb-5">Bu derste Switch komponentimizi tanıyacağız aynı zamanda değişkenin ne demek olduğunu ve mantıksal operatörlerin neler olduğunu öğreneceğiz.</p>
             </div>
         </div>
     </div>
 </div>
-
 <div class="site-section">
     <div class="container">
-        <div class="row mb-5">
-            <div class="col-md-3">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>Ders İçeriği</b></li>
-                    <li class="list-group-item"> Switch kullanımı</li>
-                    <li class="list-group-item">Değişkenler</li>
-                    <li class="list-group-item">Mantıksal Operatörler</li>
-                </ul>
-            </div>
-            <div class="col-lg-9">
-                <iframe src="https://docs.google.com/presentation/d/19TH-J0wpS_sVZsSFELbiIgmW3xZt-xCuxgD6l6RivxU/edit#slide=id.p1" frameborder="0" width="790" height="474" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <div class="mb-5">
+            <h1>Ders #03: Switch</h1>
+            <p>
+                Bu dersimizde bir arduino ile bir ledi nasıl kontrol edebileceğimizi öğreneceğiz. Arduino'ya kod yüklemek için öncelikle  <a href="https://www.arduino.cc/download_handler.php"> Arduino IDE </a> yazılımını indirip bilgisayarımıza kurmamız gerekiyor. Arduino IDE, yazdığımız kodları arduino'un anlayabileceği dile çevirip iletmeye yarar.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Led Nedir? Nasıl Çalışır?</h2>
+            <p>
+                LED, Light Emitting Diode (Türkçesi ışık yayan diyot) sözcüklerinin baş harflerinden oluşan bir kısaltmadır. İsminden de anlaşılacağı üzere LED, bir diyottur. Bildiğimiz üzere diyot, akımın yalnızca bir yönden geçmesini sağlayan iki bacaklı yarı-iletken bir devre elemanıdır.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Nerede Kullanılır?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/Assets/images/component/Led.png" width="200" height="200" />
+                </div>
+                <div class="col-md-9" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>Led'ler günlük hayatımızda onlarca yerde karşımıza çıkarlar. Kayan yazılı elektronik tabelalarda, televiyonuzun ya da herhangi bir elektronik cihazın açık/kapalı göstergesinde vb. Bu dersten sonra bir led gördüğünüzde arkasında yazılmış olan kodları da tahmin edebileceksiniz.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="site-section" id="classes-section">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
@@ -48,20 +58,7 @@
                         <img src="../assets/images/component/j.PNG" alt="Image">
                     </a>
                     <div class="class-item-text">
-                        <h2><a href="/Tests/ButonOne">Deney #1: red-kit ile Switch Okuma </a></h2>
-                        <span>Dç. Dr. Fatih DEMİRKALE</span>,
-                        <span>100 Dakika</span>
-                    </div>
-                </div>
-
-                <div class="class-item d-flex align-items-center">
-                    <a href="/Tests/ButonTwo" class="class-item-thumbnail">
-                        <img src="../assets/images/component/j.PNG" alt="Image">
-                    </a>
-                    <div class="class-item-text">
-                        <h2><a href="/Tests/ButonTwo">Deney #2: Switch ile Led Yakma</a></h2>
-                        <span>Dç. Dr. Fatih DEMİRKALE</span>,
-                        <span>100 Dakika</span>
+                        <h2><a href="/RedkitCExperiment/SwitchOne">Deney #1: red-kit ile Switch Okuma </a></h2>
                     </div>
                 </div>
                 <div class="class-item d-flex align-items-center">
@@ -69,15 +66,20 @@
                         <img src="../assets/images/component/j.PNG" alt="Image">
                     </a>
                     <div class="class-item-text">
-                        <h2><a href="/Tests/ButonThree">Deney #3: Switch Açık & Buton Basılı ise Led Yakma</a></h2>
-                        <span>Dç. Dr. Fatih DEMİRKALE</span>,
-                        <span>100 Dakika</span>
+                        <h2><a href="/RedkitCExperiment/SwitchThree">Deney #3: Switch Açık & Buton Basılı ise Led Yakma</a></h2>
                     </div>
                 </div>
             </div>
-
-
-
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonTwo" class="class-item-thumbnail">
+                        <img src="../assets/images/component/j.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/SwitchTwo">Deney #2: Switch ile Led Yakma</a></h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -93,4 +95,6 @@
         </div>
     </div>
 </div>
-
+@{
+    Html.RenderPartial("redkitC");
+}

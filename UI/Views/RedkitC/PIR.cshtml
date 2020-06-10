@@ -1,7 +1,87 @@
-﻿
+﻿@using Entity
 @{
-    ViewBag.Title = "PIR";
+    Layout = "~/Views/LayoutPage.cshtml";
 }
-
-<h2>PIR</h2>
-
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #20</h2>
+                <p class="lead mx-auto desc mb-5">Bu derste PIR Sensörü öğreneceğiz. PIR sensöründen gelen verileri okumayı, kodlarla entegre etmeyi öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Ders #20: PIR Sensör</h1>
+            <div class="row" style="padding-bottom:10px;">
+                <div class="col-md-8">
+                    <p>
+                        PIR (pasif kızılötesi) sensörler, tüm nesnelerden yayılan ısıyı ölçmek için kızılötesi algılamayı kullananan, genellikle hırsız alarm sistemlerinde ve kameralarda yer alan kızılötesi ışınımı kullanan devrelerdir. Sensör tarafından herhangi bir ısı veya enerji yayılmadığı için bu sensörler pasif kızılötesi olarak adlandırılırlar. PIR sensörü genellikle Pasif Kızılötesi, Pyroelektrik veya IR hareket sensörü olarak bilinir.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="~/Assets/images/b.gif" width="290" height="200" />
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <h2>PIR Sensör Nedir? Nasıl Çalışır?</h2>
+            <p>
+                İnsan gözü tarafından görülemeyen kızılötesi ışınım, ancak kızıl ötesi dalga boylarını kullanarak çalışan sensörler tarafından algılanabilir. PIR sensörleri kızılötesi ışınımın emisyonunu değil, ısınmayı tespit ederler. Bu nedenle termal görüntüleme ile karıştırılmaması gerekir.
+                Her nesne belirli bir seviyede radyasyon yayar ve ısı miktarına göre ışınım yayılır. PIR sensörleri, hareket algılama için kızılötesi ışınım seviyeleri arasındaki farkı algılayabilen bir pyroelektrik sensörden meydana gelir. Çalışma prensipleri sensörde yer alan IR ışınıma duyarlı algılayıcılar arasındaki pozitif fark değişimine dayanır.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Nerede Kullanılır?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/Assets/images/component/p.png" width="290" height="200" />
+                </div>
+                <div class="col-md-9" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>PIR Sensör'ler günlük hayatımızda onlarca yerde karşımıza çıkarlar. Otomatik kapılarda, turnikelerde, apartman ışıları ve otomatik ışıklar (Fotosel) vb. Bu dersten sonra bir PIR Sensör gördüğünüzde arkasında yazılmış olan kodları da tahmin edebileceksiniz.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-section" id="exp-section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8  section-heading">
+                    <span class="subheading">Deneyler</span>
+                    <h2 class="heading mb-3">Bu Derste Yaptığımız Deneyler</h2>
+                    <p>Derste izlemiş olduğunuz deneylerli aşağıda daha detaylı inceleyebilir kod dosyasını bilgisayarınıza indirebilirsiniz.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="class-item d-flex align-items-center exp">
+                        <a href="/Tests/LedOne" class="class-item-thumbnail">
+                            <img src="../assets/images/component/p.png" alt="Image">
+                        </a>
+                        <div class="class-item-text">
+                            <h2><a href="/RedkitCExperiment/PirOne">Deney 1: Fotosel Lamba</a></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="class-item d-flex align-items-center exp">
+                        <a href="/Tests/LedTwo" class="class-item-thumbnail">
+                            <img src="../assets/images/component/p.png" alt="Image">
+                        </a>
+                        <div class="class-item-text">
+                            <h2><a href="/RedkitCExperiment/PirTwo">Deney 2: Tasaruflu Lamba</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    Html.RenderPartial("redkitC");
+}

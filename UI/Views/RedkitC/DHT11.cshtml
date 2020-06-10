@@ -2,6 +2,123 @@
 @{
     ViewBag.Title = "DHT11";
 }
+@using Entity
+@{
+    Layout = "~/Views/LayoutPage.cshtml";
+}
 
-<h2>DHT11</h2>
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #16</h2>
+                <p class="lead mx-auto desc mb-5">Bu derste DHT11 Sıcaklık ve Nem Sensörünün yapısını ve nasıl kullanıldığını öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>
+                Ders #16: DHT11 Sıcaklık ve Nem Sensörü
+            </h1>
+            <p>
+                DHT11 Isı ve Nem Sensörünün yapısını, nasıl çalıştığını ve nerelerde kullanıldıklarını öğreneceğiz.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>DHT11 Nedir? Nasıl Çalışır?</h2>
+            <p>
+                DHT11 sıcaklık ve nem algılayıcı kalibre edilmiş dijital sinyal çıkışı veren gelişmiş bir sensör birimidir.DHT11, üzerinde 8 bitlik mikrodenetleyici bulunmaktadır.DHT11 Isı ve Nem Sensörü hassas bir kalibrasyona sahiptir ve kalibrasyon katsayısı OTP hafızada bir çeşit program üzerinde saklanmıştır. Ürün algılama (sensing) sırasında hafızada saklı olan bu katsayıya başvurur.
+                Bu sensör 0-50°C  arasında ve ± 2 ° C hassasiyetle sıcaklık, % 5 doğrulukla % 20-80 arasında nem değeri ölçebilmektedir.
+                Aynı zamanda DHT11 Isı ve Nem Sensörü küçük boyutları, düşük enerji geresinimi, ve geniş iletim mesafesi (20m) ile uygulamalarda kullanılabilir. Ayrıca aynı hizada sıralanmış bacaklar bağlantıyı kolaylaştırır.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Nerede Kullanılır?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/Assets/images/component/dht11resim.jpg" width="200" height="200" />
+                </div>
+                <div class="col-md-9" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>
+                            Termostatların içinde bulunurlar. Bulundukları ortamın sıcaklığını ve nemini ölçerek termostatın bu değerleri sabit tutmasına yardımcı olurlar.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <h2>DHT11 Kütüphanesinin Kurulumu</h2>
+
+            <div class="row" style="padding-bottom:10px;">
+                <div class="col-md-5">
+                    <img src="~/Assets/images/lessonContent/DHT11kütüphane1.png" />
+                </div>
+                <div class="col-md-7" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>
+                            DHT11 ısı ve nem sensörünün kullanılması için bazı hazır komutlara ihtiyacımız olacak.
+                            Bu komutlar Arduino IDE içerisinde olmadığı için dışarıdan kütüphane yüklememiz gerekiyor.
+                            Yükleyeceğimiz kütüphaneye <a href="https://drive.google.com/drive/u/1/folders/14e-W5F3EyYN_4G7sPCJU50R9QChKlSC5">DHT11</a> adresinden ulaşabilirsiniz.
+
+                        </li>
+                        <li>".ZIP Kitaplığı Ekle" seçeneğine tıkladıktan sonra açılan ekrandan ZIP dosyası halinde indirilmiş olan "dht11" dosyasını seçiyoruz böylece kütüphanemizi eklemiş oluyoruz.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="site-section" id="exp-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-8  section-heading">
+                <span class="subheading">Deneyler</span>
+                <h2 class="heading mb-3">Bu Derste Yaptığımız Deneyler</h2>
+                <p>Derste izlemiş olduğunuz deneylerli aşağıda daha detaylı inceleyebilir kod dosyasını bilgisayarınıza indirebilirsiniz.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center exp">
+                    <a href="/Test/Dht11One" class="class-item-thumbnail">
+                        <img src="../assets/images/component/n.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/DHTOne">Deney 1: Sıcaklık ve Nem Değeri</a></h2>
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center exp">
+                    <a href="/Tests/Dht11Three" class="class-item-thumbnail">
+                        <img src="../assets/images/component/n.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/DHTThree">Deney 3: Sıcaklık ve Nem LCD Ekranda</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center exp">
+                    <a href="/Tests/Dht11Two" class="class-item-thumbnail">
+                        <img src="../assets/images/component/n.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/DHTTwo">Deney 2: Sıcaklığın Işık Göstergesi</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    Html.RenderPartial("redkitC");
+}

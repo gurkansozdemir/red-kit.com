@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "RFIDOne";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #21</h2>
+                <p class="lead mx-auto desc mb-5">RFID</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Deney 5: RFID Kart ID Okuma</h1>
+            <p>
+                RFID teknolojisi nesnelerin radyo dalgaları kullanılarak tanınması için kullanılan teknolojidir.
+            </p>
+            <p>
+                Günlük hayatımızda toplu taşıma biletlerinde, işyeri ve okul girişlerindeki turnikelerde karşımıza sıklıkla çıkmaktadır.
+            </p>
+            <p>
+                Arduino ile RFID projelerini incelediğimizde kapı kilidi, bir ortamda bulunan kişi sayısı bilgisinin alınması, bilgisayar oturum kilidi, alarm sistemi gibi projelerle sıklıkla karşılaşabilirsiniz.
+            </p>
+            <p>
+                RFID paketinin içinden çıkan kartların kendine ait benzersiz birer kimlikleri vardır.
+            </p>
+            <p>
+                Bu kimlik numarası en fazla 255’e kadar çıkabilecek 4 adet sayıdan oluşur ve bir dizi içerisinde saklanır.
+            </p>
+            <p>
+                dizi[1] 🡺 10
+            </p>
+            <p>
+                dizi[2] 🡺 15
+            </p>
+            <p>
+                dizi[3] 🡺 20
+            </p>
+        </div>
+        <h2 class="mb-3">Programlama</h2>
+        <p>
+            İnt veri tipli 6 elemanlı biz dizi tanımlandı.
+        </p>
+        <p>
+            Dizinin içerisinde Arduino üzerindeki pwm pinlerinin numaraları atandı.
+        </p>
+        <p>
+            Dizinin elemanları seri ekranda yazdırıldı.
+        </p>
+        <iframe src=https://create.arduino.cc/editor/red-kit/2bb20303-2f5e-46e9-af34-7e835c16e4c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        <p style="color:green">Yukarıdaki kod pencerisinin sağ üst köşesindeki aşağı doğru ok simgesine tıklayan deney dosyasını bilgisayarınıza indirebilirsiniz. </p>
+        <div>
+            <a href="/RedkitC/RFID" type="button" class="btn btn-danger">&laquo; Derse Dön</a>
+        </div>
+    </div>
+</div>
