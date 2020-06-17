@@ -13,6 +13,65 @@ namespace UI.Controllers
         {
             return View();
         }
-
+        public ActionResult BuzzerOne()
+        {
+            return View();
+        }
+        public ActionResult BuzzerTwo()
+        {
+            return View();
+        }
+        public ActionResult BuzzerThree()
+        {
+            return View();
+        }
+        public ActionResult BuzzerFour()
+        {
+            return View();
+        }
+        public ActionResult BuzzerFive()
+        {
+            return View();
+        }
+        public ActionResult IrOne()
+        {
+            return View();
+        }
+        public ActionResult IrTwo()
+        {
+            return View();
+        }
+        public ActionResult IrThree()
+        {
+            return View();
+        }
+        public ActionResult IrFour()
+        {
+            return View();
+        }
+        public ActionResult LdrOne()
+        {
+            return View();
+        }
+        public ActionResult LdrTwo()
+        {
+            return View();
+        }
+        public ActionResult LdrThree()
+        {
+            return View();
+        }
+        public ActionResult LdrFour()
+        {
+            return View();
+        }
+        public ActionResult LdrFive()
+        {
+            return View();
+        }
+        public ActionResult LdrSix()
+        {
+            return View();
+        }
     }
 }
