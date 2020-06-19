@@ -73,5 +73,10 @@ namespace UI.Controllers
         {
             return View();
         }
+
+        public ActionResult ButtonOne()
+        {
+            return View();
+        }
     }
 }

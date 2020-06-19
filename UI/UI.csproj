@@ -272,6 +272,7 @@
     <Content Include="assets\images\lessonContent\Ultrasonik.png" />
     <Content Include="assets\images\logo_yazili.png" />
     <Content Include="assets\images\logoşekil.png" />
+    <Content Include="assets\images\mblockproje5devre.png" />
     <Content Include="assets\images\mBlock\2020-06-09.png" />
     <Content Include="assets\images\mBlock\3.1. Buzzer ile Bip sesi.png" />
     <Content Include="assets\images\mBlock\buzzer1.png" />
@@ -351,6 +352,10 @@
     <Content Include="assets\images\schematic_diagrams\mod3.PNG" />
     <Content Include="assets\images\schematic_diagrams\mod4.PNG" />
     <Content Include="assets\images\schematic_diagrams\proje2.PNG" />
+    <Content Include="assets\images\schematic_diagrams\proje5.1.png" />
+    <Content Include="assets\images\schematic_diagrams\proje5.2.png" />
+    <Content Include="assets\images\schematic_diagrams\proje5.3.png" />
+    <Content Include="assets\images\schematic_diagrams\proje5.4.png" />
     <Content Include="assets\images\schematic_diagrams\rfid1.PNG" />
     <Content Include="assets\images\schematic_diagrams\rfid2.PNG" />
     <Content Include="assets\images\schematic_diagrams\servo1.PNG" />
