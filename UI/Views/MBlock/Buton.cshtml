@@ -1,7 +1,117 @@
 ﻿
 @{
-    ViewBag.Title = "Buton";
+    ViewBag.Title = "Led";
+    Layout = "~/Views/LayoutPage.cshtml";
 }
 
-<h2>Buton</h2>
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #2</h2>
+                <p class="lead mx-auto desc mb-5">Bu derste arduino ile Buton kodlamayı öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Ders #01: Seri Port Ekran ve Buton Kullanımı</h1>
+            <p>
+                yazzz  Bu dersimizde bir arduino ile bir ledi nasıl kontrol edebileceğimizi öğreneceğiz. Arduino'ya kod yüklemek için öncelikle  <a href="https://www.arduino.cc/download_handler.php"> Arduino IDE </a> yazılımını indirip bilgisayarımıza kurmamız gerekiyor. Arduino IDE, yazdığımız kodları arduino'un anlayabileceği dile çevirip iletmeye yarar.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Seri Port Ekranı Nedir? Nasıl Çalışır?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/assets/images/SeriPort1.PNG" width="200" height="200" />
+                </div>
+                <div class="col-md-9" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>
+                            Arduino’ya bağladığımız input bileşenlerin gönderdiği değeri okumamızı sağlayan ekrandır.
+                        </li>
+                        <li>
+                            Örneğin bir sıcaklık sensörü ortamdaki ısı miktarını bize sayısal cinsten gönderir biz bu gelen değeri seri port ekranında anlık olarak okuyabiliriz.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section" id="exp-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-8  section-heading">
+                <span class="subheading">Deneyler</span>
+                <h2 class="heading mb-3">Bu Derste Yaptığımız Deneyler</h2>
+                <p>Derste izlemiş olduğunuz deneylerli aşağıda daha detaylı inceleyebilir kod dosyasını bilgisayarınıza indirebilirsiniz.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonOne" class="class-item-thumbnail">
+                        <img src="../assets/images/component/b.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/ButtonOne">Deney #1: Hello World</a></h2>
+                    </div>
+                </div>
+
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonTwo" class="class-item-thumbnail">
+                        <img src="../assets/images/component/b.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/ButtonTwo">Deney #2: red-kit ile Buton Okuma</a></h2>
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonThree" class="class-item-thumbnail">
+                        <img src="../assets/images/component/bb.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/ButtonThree">Deney #3: Buton ile Led Yakma</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonFour" class="class-item-thumbnail">
+                        <img src="../assets/images/component/bb.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/ButtonFour">Deney #4: red-kit ile Butonla Led Yakıp Söndürme</a></h2>
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonFive" class="class-item-thumbnail">
+                        <img src="../assets/images/component/bb.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/ButtonFive">Deney #5: 2 Buton ile Led Yakıp Söndürme</a></h2>
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonSix" class="class-item-thumbnail">
+                        <img src="../assets/images/component/bb.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/RedkitCExperiment/ButtonSix">Deney #6: red-kit ile Yürüyen Işık</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    Html.RenderPartial("redkitC");
+}
 

@@ -303,6 +303,9 @@
     <Content Include="assets\images\mBlock\RFID1.png" />
     <Content Include="assets\images\mBlock\RFID2.png" />
     <Content Include="assets\images\mBlock\RFID3.png" />
+    <Content Include="assets\images\Mblock_Experiments_CodeBlocks\mskuklaparksensör.png" />
+    <Content Include="assets\images\Mblock_Experiments_CodeBlocks\msparksensörü.png" />
+    <Content Include="assets\images\Mblock_Experiments_CodeBlocks\msyaklasıncayananled.png" />
     <Content Include="assets\images\red-kit_ico.ico" />
     <Content Include="assets\images\schematic_diagrams\1.1.LedYakma.png" />
     <Content Include="assets\images\schematic_diagrams\1.2.İkiLedKontrolü.png" />
@@ -720,6 +723,18 @@
     <Content Include="Views\MblockExperiment\LdrFour.cshtml" />
     <Content Include="Views\MblockExperiment\LdrFive.cshtml" />
     <Content Include="Views\MblockExperiment\LdrSix.cshtml" />
+    <Content Include="Views\MblockExperiment\ServoOne.cshtml" />
+    <Content Include="Views\MblockExperiment\ServoTwo.cshtml" />
+    <Content Include="Views\MblockExperiment\ServoThree.cshtml" />
+    <Content Include="Views\MblockExperiment\RgbOne.cshtml" />
+    <Content Include="Views\MblockExperiment\RgbTwo.cshtml" />
+    <Content Include="Views\MBlock\LCD2.cshtml" />
+    <Content Include="Views\MblockExperiment\LcdOne.cshtml" />
+    <Content Include="Views\MblockExperiment\LcdTwo.cshtml" />
+    <Content Include="Views\MblockExperiment\LcdThree.cshtml" />
+    <Content Include="Views\MblockExperiment\LcdFour.cshtml" />
+    <Content Include="Views\MblockExperiment\LedOne.cshtml" />
+    <Content Include="Views\MblockExperiment\LedTwo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

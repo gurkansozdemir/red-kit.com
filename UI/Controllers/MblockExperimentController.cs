@@ -73,5 +73,57 @@ namespace UI.Controllers
         {
             return View();
         }
+        public ActionResult ServoOne()
+        {
+            return View();
+        }
+        public ActionResult ServoTwo()
+        {
+            return View();
+        }
+        public ActionResult ServoThree()
+        {
+            return View();
+        }
+        public ActionResult RgbOne()
+        {
+            return View();
+        }
+        public ActionResult RgbTwo()
+        {
+            return View();
+        }
+        public ActionResult LcdOne()
+        {
+            return View();
+        }
+        public ActionResult LcdTwo()
+        {
+            return View();
+        }
+        public ActionResult LcdThree()
+        {
+            return View();
+        }
+        public ActionResult LcdFour()
+        {
+            return View();
+        }
+        public ActionResult LedOne()
+        {
+            return View();
+        }
+        public ActionResult LedTwo()
+        {
+            return View();
+        }
+        public ActionResult LedThree()
+        {
+            return View();
+        }
+        public ActionResult LedFour()
+        {
+            return View();
+        }
     }
 }

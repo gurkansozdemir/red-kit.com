@@ -1,7 +1,101 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Buzzer";
+    Layout = "~/Views/LayoutPage.cshtml";
 }
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #9</h2>
+                <p class="lead mx-auto desc mb-5">Bu derste arduino ile  Buzzer  kodlamayı öğreneceğiz.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>Buzzer</h2>
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Ders #09: Buzzer(Düdük)  </h1>
+            <p>
+                Buzzer Arduino devrelerinde ses elde etmek amacıyla kullanılan bir ekipmandır.
+            </p>
 
+            <h2>Buzzer Nedir? Nasıl Çalışır ?</h2>
+            <p>
+                Bir mini hoparlördür.Buzzer verilen voltaja göre farklı sinyalleri sağlayan bir cihazdır. Sinyal sesleri çıkarmak için kullanılır.
+
+
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Nerede Kullanılır ?</h2>
+            <div class="row">
+                <div class="col-md-3">
+
+
+                    <img src="~/assets/images/component/buzzerr.png" width="250" height="200" />
+                </div>
+                <div class="col-md-9" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>
+                            Araçlarda geri gidildiğinde çıkan sinyal sesi simülatörü yapılabilir.
+                        </li>
+                        <li>
+                            Bir cihazda arıza tespit edildiğinde arızaya göre farklı tonlarda ve sayılarda öterek arıza sebebini belirtebilir.
+                        </li>
+                        <li>
+                            Masaüstü bilgisayarlarda ilk açtığınızda çıkan ses, bir donanım hatası olduğunda çıkan ses buna örnek verilebilir.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section" id="exp-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-8  section-heading">
+                <span class="subheading">Deneyler</span>
+                <h2 class="heading mb-3">Bu Derste Yaptığımız Deneyler</h2>
+                <p>Derste izlemiş olduğunuz deneylerli aşağıda daha detaylı inceleyebilir kod dosyasını bilgisayarınıza indirebilirsiniz.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonOne" class="class-item-thumbnail">
+                        <img src="../assets/images/component/buzzerr.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2>
+                            <a href="/MblockExperiment/BuzzerOne">Deney #1: İlk ses - Bip</a>
+                        </h2>
+                    </div>
+                </div>
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonThree" class="class-item-thumbnail">
+                        <img src="../assets/images/component/cc.PNG" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/MblockExperiment/BuzzerThree">Deney #3: İlk Melodimizi Çalalım - Aydede </a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="class-item d-flex align-items-center">
+                    <a href="/Tests/ButonTwo" class="class-item-thumbnail">
+                        <img src="../assets/images/component/cc.png" alt="Image">
+                    </a>
+                    <div class="class-item-text">
+                        <h2><a href="/MblockExperiment/BuzzerTwo">Deney #2:  Butona Basılıysa Ötsün </a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    Html.RenderPartial("redkitC");
+}

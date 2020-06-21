@@ -53,6 +53,10 @@ namespace UI.Controllers
         {
             return View();
         }
+        public ActionResult LCD2()
+        {
+            return View();
+        }
         public ActionResult DHT11()
         {
             return View();
