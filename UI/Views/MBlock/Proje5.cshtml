@@ -1,7 +1,182 @@
 ﻿
 @{
-    ViewBag.Title = "Proje5";
+    Layout = "~/Views/LayoutPage.cshtml";
+}
+<div class="bgimg" style="background-image: url('../assets/images/bg_03.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+                <h2 class="">red-kit ile Arduino Programlamaya Giriş #21</h2>
+                <p class="lead mx-auto desc mb-5">Bu derste bir Termostat nasıl çalışır öğrencek ve kendi termostatımızı yapacağız.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section">
+    <div class="container">
+        <div class="mb-5">
+            <h1>Ders #21: Termostat Projesi</h1>
+            <p>
+                Bu projede ortamdaki ısı miktarı, dinamik olarak ayarlanan seviyenin üstüne çıktığında, sesli ve ışıklı uyarı vermesi amaçlanmıştır.
+            </p>
+        </div>
+        <div class="mb-5">
+            <h2>Termostat Nedir? Nasıl Çalışır?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/Assets/images/lessonContent/termostat.jpg" style="width:100%; height:auto;" />
+                </div>
+                <div class="col-md-9">
+                    <p>
+
+
+                        Isıtma ya da soğutma sistemleri ile birlikte kullanılan ve sıcaklığın istenen bir düzeyde tutulmasını sağlayan parça termostat olarak adlandırılır.
+                        Termostatlar gerektiğinde devreye giren ve gerekmediğinde de devre dışı kalan bir mekanizmaya sahip olacak şekilde üretiliyor.
+                        Isı düzeyi istenen seviyeye geldiğinde duran ve ısı düştüğünde yeniden çalışan termostatlar enerji kullanımında ekonomik olmalarıyla da dikkat çekiyor.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <h2>Nerede Kullanılır?</h2>
+            <p>Buzdolapları, kombiler gibi ortamdaki ısıya göre hareket etmesi gereken cihazlarda tersmostat kullanılır.</p>
+        </div>
+
+      
+
+
+
+        <div class="mb-5">
+            <h2>Proje Algoritması</h2>
+            <ul class="ul-check list-unstyled success">
+                <li>DHT11'den değer okunur ve LCD 5110 ekranda yazdırılır.</li>
+                <li>Potansiyometreden değer okunur, 0-100 aralığına oranlanır ve LCD 5110 ekranda yazdırılır.</li>
+                <li>Kullanıcı butona bastığında potansiyometredeki değer bir değişkende saklanır. Bu değer bizim sınır değerimiz olur.</li>
+                <li>DHT11'den okunan sıcaklık değeri kullanıcının belirlediği sınır değerinin altında olup olmadığı kontrol edilir.</li>
+                <li>Sıcaklık sınır değerinin altında düştü ise led ve buzzer yanıp sönerek sinyal verir.</li>
+                <li>  Tüm bu işlemler switch açık ise gerçekleşecektir. </li>
+            </ul>
+        </div>
+        <div class="mb-5">
+            <h2>Proje Devresi</h2>
+     
+
+            <div class="row container">
+                <div class="col-md-8">
+                    <img src="../assets/images/schematic_diagrams/termostat.PNG" style="width: 100%; height: auto;">
+                </div>
+                <div class="col-md-4" style="padding-top: 5%;">
+                    <ul class="ul-check list-unstyled success">
+                        <li>
+                            LCD 5110 Bağlantıları
+                            <ul class="ul-check list-unstyled success">
+                                <ul>RST 🡺 11</ul>
+                                <ul>CE 🡺 12</ul>
+                                <ul>DC 🡺 10</ul>
+                                <ul>DIN 🡺 9</ul>
+                                <ul>CLK 🡺 8</ul>
+                                <ul>BL 🡺 13</ul>
+                            </ul>
+                        </li>
+                        <li>DHT11 🡺 2</li>
+                        <li>Led & Buzzer 🡺 3</li>
+                        <li>Switch 🡺 4</li>
+                        <li>Buton4 🡺 5</li>
+                        <li>Potansiyometre 🡺 A0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+
+            <div class="mb-5">
+                <h2>  Projenin Programlanması</h2>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="~/Assets/images/schematic_diagrams/proje5.1.png" style="width:100%; height:auto;" />
+                    </div>
+                    <div class="col-md-6"  style="padding-top: 3%;">
+                        <p>
+                            Projemize fonksiyonlarımızı oluşturarak başlayalım.
+                            İlk fonksiyonumuzun ismi Oda Sıcaklığı..
+                            Oda sıcaklığı adında bir değişken oluşturuyoruz içine DHT mizden okunacak olan sıcaklık değerlerini atıyoruz.
+                            5110 ekranındaki konumunu belirledikten sonra ekranımıza DHT mizden okunan değeri yazdırıyoruz.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="~/Assets/images/schematic_diagrams/proje5.2.png" style="width:100%; height:auto;" />
+                    </div>
+                    <div class="col-md-6"  style="padding-top: 6%;">
+                        <p>
+                            Derece adında bir fonksiyon oluşturuyoruz.
+                            Hafıza adında bir değişken oluşturuyoruz içine potansiyometremizden okunan değerlerin 34 e bölümünden ortaya çıkan sonuçları atıyoruz.
+                            Not: Potansiyometre 0-1023 arasında değerler üretir. Bizde ayarlanabilir derecemizin max değerinin 30 olmasını istiyoruz bu yüzden 1023 ü 34 e bölüyoruz.
+                            5110 ekranındaki konumunu belirledikten sonra ekranımıza hafıza değişkenimizin içine atanan değeri yazdırıyoruz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+
+              
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="~/Assets/images/schematic_diagrams/proje5.3.png" style="width:100%; height:auto;" />
+                    </div>
+                    <div class="col-md-6" style="padding-top: 19%;">
+                        
+                        <p>
+                            Buton adlı bir fonksiyon oluşturuyoruz.
+                            Butona basılı ise program oda sıcaklığı isimli değişkenin içinde bulunan sayısal değer ile hafıza değişkeninin içinde bulunan sayısal değeri kıyaslıyor.
+                            Eğer oda sıcaklığı hafızadan büyükse ledimiz yanmaya başlıyor.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="~/Assets/images/schematic_diagrams/proje5.4.png" style="width:100%; height:auto;" />
+                    </div>
+                    <div class="col-md-6"  style="padding-top: 19%;">
+                        <p>
+                            Fonksiyonlarımızı oluşturduğumuza göre artık ana kod bloğumuzu oluşturmaya başlayabiliriz.
+                            LCD ekranımız ve DHT mizin tanımlamalarını yapıyoruz.
+                            Termostat sistemimin Switch açıkken devreye girmesini ve LCD ekranımın ışığının yanmasını istiyorum
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+</div>
+
+@{
+    Html.RenderPartial("redkitC");
 }
 
-<h2>Proje5</h2>
+
+
+
+
 
